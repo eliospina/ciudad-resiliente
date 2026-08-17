@@ -1,0 +1,148 @@
+{
+  "updated": "2026-08-17",
+  "flows": [
+    {
+      "id": "andi-empresas-unidas",
+      "origin": "ANDI — Empresas Unidas por Colombia",
+      "amount": "201.637 millones de pesos (~64 millones de USD)",
+      "status": "Anunciado · en fiducia",
+      "route": "Empresarios → fiducia gremial → comunidades afectadas",
+      "territory": "Nacional (Chocó, Valle, Risaralda y otros)",
+      "executed": "Información no disponible",
+      "source": {
+        "name": "EFE, 15 ago 2026",
+        "url": "https://efe.com/mundo/2026-08-15/empresarios-donacion-terremoto-colombia/"
+      }
+    },
+    {
+      "id": "santo-domingo",
+      "origin": "Familia Santo Domingo (parte de la campaña ANDI, no es un total aparte)",
+      "amount": "100.000 millones de pesos",
+      "status": "Anunciado",
+      "route": "Donante privado → campaña ANDI → fiducia",
+      "territory": "Información no disponible",
+      "executed": "Información no disponible",
+      "source": {
+        "name": "EFE, 15 ago 2026",
+        "url": "https://efe.com/mundo/2026-08-15/empresarios-donacion-terremoto-colombia/"
+      }
+    },
+    {
+      "id": "banco-mundial",
+      "origin": "Banco Mundial",
+      "amount": "700.000 USD",
+      "status": "Asignado",
+      "route": "350.000 Cruz Roja · 200.000 evaluación de daños · 150.000 apoyo técnico",
+      "territory": "Nacional",
+      "executed": "Información no disponible",
+      "source": {
+        "name": "Semana",
+        "url": "https://www.semana.com/nacion/articulo/mas-de-1800-toneladas-de-donaciones-la-movilizacion-sin-precedentes-tras-el-terremoto-en-colombia/202657/"
+      }
+    },
+    {
+      "id": "italia",
+      "origin": "Italia — Ministerio de Asuntos Exteriores / AICS",
+      "amount": "4,5 millones de euros",
+      "status": "Autorizado (14 ago 2026)",
+      "route": "1,5 millones vía Cruz Roja, FAO y PMA · 3 millones vía Agencia Italiana de Cooperación (resiliencia comunitaria)",
+      "territory": "Información no disponible (regiones afectadas)",
+      "executed": "Información no disponible",
+      "source": {
+        "name": "EFE / swissinfo, 14 ago 2026",
+        "url": "https://www.swissinfo.ch/spa/italia-activa-paquetes-de-ayuda-humanitaria-a-colombia-por-valor-de-4%2c5-millones-de-euros/91900578"
+      }
+    },
+    {
+      "id": "suecia",
+      "origin": "Suecia",
+      "amount": "5 millones de coronas suecas (~522.000 USD) + 150 tiendas y 360 mantas",
+      "status": "Anunciado",
+      "route": "Dinero vía ACNUR · material vía Mecanismo de Protección Civil de la UE",
+      "territory": "Información no disponible",
+      "executed": "Información no disponible",
+      "source": {
+        "name": "EFE, 14 ago 2026 · Europa Press, 17 ago 2026",
+        "url": "https://www.infobae.com/america/agencias/2026/08/14/noruega-y-suecia-destinaran-15-millones-de-dolares-a-ayudar-a-colombia-tras-el-terremoto/"
+      }
+    },
+    {
+      "id": "noruega",
+      "origin": "Noruega",
+      "amount": "10 millones de coronas (~1 millón de USD)",
+      "status": "Anunciado",
+      "route": "Salud, agua, albergue temporal · a través de socios humanitarios",
+      "territory": "Información no disponible",
+      "executed": "Información no disponible",
+      "source": {
+        "name": "EFE, 14 ago 2026",
+        "url": "https://www.infobae.com/america/agencias/2026/08/14/noruega-y-suecia-destinaran-15-millones-de-dolares-a-ayudar-a-colombia-tras-el-terremoto/"
+      }
+    },
+    {
+      "id": "union-europea",
+      "origin": "Comisión Europea (ayuda humanitaria de emergencia)",
+      "amount": "2,1 millones de euros",
+      "status": "Anunciado (12 ago 2026)",
+      "route": "Socios en terreno: salud, agua, refugio, alimentos, efectivo",
+      "territory": "Centro y occidente; un tramo Cruz Roja Alemana en Chocó y Valle",
+      "executed": "Información no disponible (salvo 100.000 euros reasignados a 2.500 familias en Chocó y Valle, según la Comisión)",
+      "source": {
+        "name": "Comisión Europea, 12 ago 2026",
+        "url": "https://civil-protection-humanitarian-aid.ec.europa.eu/news-stories/news/eu-provides-eur21-million-emergency-humanitarian-assistance-colombia-following-earthquake-2026-08-12_en"
+      }
+    },
+    {
+      "id": "fondo-milagro",
+      "origin": "Fondo Milagro / Plan Milagro de Reconstrucción (Gobierno nacional)",
+      "amount": "Información no disponible",
+      "status": "Fondo creado para centralizar aportes públicos, privados y de cooperación",
+      "route": "Nación → Fondo Milagro → vivienda e infraestructura",
+      "territory": "Zonas afectadas",
+      "executed": "Información no disponible",
+      "source": {
+        "name": "Pulzo / El Diario, Plan Milagro",
+        "url": "https://www.pulzo.com/economia/vivienda/plan-milagro-de-reconstruccion-en-colombia-fondo-milagro-y-todos-ponen-tras-el-sismo-PP5275598A"
+      }
+    },
+    {
+      "id": "pereira-alcaldia",
+      "origin": "Asignación ejecutada en Pereira / Risaralda",
+      "amount": "Información no disponible",
+      "status": "Información no disponible",
+      "route": "Fondo o fiducia → alcaldía / gobernación → proyecto",
+      "territory": "Risaralda",
+      "executed": "Información no disponible",
+      "source": {
+        "name": "Sin fuente pública consolidada en este laboratorio",
+        "url": ""
+      }
+    },
+    {
+      "id": "valle",
+      "origin": "Asignación ejecutada en Valle del Cauca",
+      "amount": "Información no disponible",
+      "status": "Información no disponible",
+      "route": "Fondo o fiducia → alcaldía / gobernación → proyecto",
+      "territory": "Valle",
+      "executed": "Información no disponible",
+      "source": {
+        "name": "Sin fuente pública consolidada en este laboratorio",
+        "url": ""
+      }
+    },
+    {
+      "id": "choco",
+      "origin": "Asignación ejecutada en Chocó (epicentro)",
+      "amount": "Información no disponible",
+      "status": "Información no disponible",
+      "route": "Fondo o fiducia → alcaldía / gobernación → proyecto",
+      "territory": "Chocó",
+      "executed": "Información no disponible",
+      "source": {
+        "name": "Sin fuente pública consolidada en este laboratorio",
+        "url": ""
+      }
+    }
+  ]
+}

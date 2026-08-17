@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ciudad Resiliente — el óvalo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <img
+        src="public/ciudad-ovalo.png"
+        alt="Ciudad ovalada con una nave de luz en el centro, células verdes y montañas."
+      />
+      <div class="hero-copy">
+        <p class="kicker">Laboratorio abierto · Risaralda · Valle · Chocó</p>
+        <h1>Una ciudad ovalada.<br />Una nave en el centro.<br />Células que se sostienen.</h1>
+        <p class="lead">
+          Fundamos una forma: comunidades que se sostienen, unidas al verde, a la
+          luz y al agua. El centro es una nave. La gente entra.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section class="split">
+        <div>
+          <h2>El óvalo</h2>
+          <p>
+            Elige una célula. El centro no es un palacio: es una nave abierta a todas
+            las tradiciones, un ágora que no le pertenece a nadie.
+          </p>
+          <p id="cell-note" class="note">
+            Toca el óvalo. Cada anillo es una comunidad que produce, cuida y se
+            conecta con las demás.
+          </p>
+        </div>
+        <figure class="oval-wrap">
+          <svg id="ovalo" viewBox="0 0 400 280" role="img" aria-label="Plano ovalado de la ciudad">
+            <ellipse class="ring" cx="200" cy="140" rx="188" ry="122" />
+            <ellipse class="ring" cx="200" cy="140" rx="148" ry="96" />
+            <ellipse class="ring" cx="200" cy="140" rx="104" ry="68" />
+            <g class="cell" data-id="naturaleza" transform="translate(200 38)">
+              <circle r="16" />
+              <text y="4">verde</text>
+            </g>
+            <g class="cell" data-id="energia" transform="translate(318 90)">
+              <circle r="16" />
+              <text y="4">luz</text>
+            </g>
+            <g class="cell" data-id="agua" transform="translate(330 190)">
+              <circle r="16" />
+              <text y="4">agua</text>
+            </g>
+            <g class="cell" data-id="alimento" transform="translate(70 90)">
+              <circle r="16" />
+              <text y="4">comida</text>
+            </g>
+            <g class="cell" data-id="vivienda" transform="translate(58 190)">
+              <circle r="16" />
+              <text y="4">casa</text>
+            </g>
+            <g class="cell" data-id="escuela" transform="translate(200 242)">
+              <circle r="16" />
+              <text y="4">escuela</text>
+            </g>
+            <g class="cell ship" data-id="nave" transform="translate(200 140)">
+              <ellipse rx="28" ry="16" />
+              <text y="4">nave</text>
+            </g>
+          </svg>
+        </figure>
+      </section>
+
+      <section>
+        <h2>Tres suelos, una forma</h2>
+        <div class="cards">
+          <article>
+            <h3>Risaralda</h3>
+            <p>Colinas, café, sismo. El óvalo se planta sin borrar la montaña.</p>
+          </article>
+          <article>
+            <h3>Valle</h3>
+            <p>Río, densidades, calor. Las células se abren al agua y al valle.</p>
+          </article>
+          <article>
+            <h3>Chocó</h3>
+            <p>Selva, lluvia, ríos. La ciudad no conquista el verde: se teje con él.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="hope">
+        <h2>El dinero y la forma</h2>
+        <p>
+          Entran recursos enormes para quienes perdieron la casa.
+          Si ese caudal existe, que funde ciudad: óvalo, células, nave, vida.
+          Quien administra con honestidad se alegra: la ciudadanía ve lo que hay.
+        </p>
+      </section>
+
+      <section id="rastreador" class="tracker">
+        <h2>Rastreador de recursos</h2>
+        <p>
+          De dónde sale, por dónde pasa, si llegó al suelo. Lo anunciado no es lo ejecutado.
+        </p>
+        <div class="path">
+          Donante → fiducia o fondo → territorio → proyecto → célula
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Origen</th>
+                <th>Monto</th>
+                <th>Ruta</th>
+                <th>Territorio</th>
+                <th>Ejecutado</th>
+                <th>Fuente</th>
+              </tr>
+            </thead>
+            <tbody id="flujos-body"></tbody>
+          </table>
+        </div>
+        <p class="disclaimer">
+          Es información, no regulación. No señalamos a nadie; solo informamos.
+          Toda cifra debe ser verificada por el usuario ante su fuente original.
+        </p>
+      </section>
+
+      <section>
+        <h2>Invitación</h2>
+        <p>
+          Arquitectas, vecinos, universidades, gobiernos, niños. La ciudad se piensa
+          en común. El código será abierto. Hoy esto es una semilla: un óvalo, una nave,
+          la gente adentro.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Ciudad Resiliente · laboratorio de diseño · 2026</p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

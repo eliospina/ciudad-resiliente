@@ -1,0 +1,211 @@
+:root {
+  --ink: #1c1814;
+  --paper: #f3eadc;
+  --gold: #c4a06a;
+  --moss: #3d5a4c;
+  --muted: #6f675c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.hero {
+  position: relative;
+  min-height: 70vh;
+}
+
+.hero img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.92);
+}
+
+.hero-copy {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 2.5rem 6vw 2rem;
+  background: linear-gradient(transparent, rgba(28, 24, 20, 0.78));
+  color: var(--paper);
+}
+
+.kicker {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-family: system-ui, sans-serif;
+  margin: 0 0 0.6rem;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.15;
+  margin: 0 0 0.8rem;
+}
+
+.lead,
+main p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+main {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 3rem 6vw 5rem;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 1.7rem;
+}
+
+.split {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 840px) {
+  .split {
+    grid-template-columns: 1fr 1.1fr;
+  }
+}
+
+.note {
+  color: var(--moss);
+  min-height: 4.5rem;
+}
+
+.oval-wrap {
+  margin: 0;
+}
+
+#ovalo {
+  width: 100%;
+  height: auto;
+}
+
+.ring {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 1.2;
+}
+
+.cell circle,
+.cell ellipse {
+  fill: #efe4d0;
+  stroke: var(--ink);
+  stroke-width: 1.2;
+  cursor: pointer;
+}
+
+.cell.ship ellipse {
+  fill: var(--gold);
+}
+
+.cell text {
+  font-size: 8px;
+  text-anchor: middle;
+  font-family: system-ui, sans-serif;
+  pointer-events: none;
+  fill: var(--ink);
+}
+
+.cell:hover circle,
+.cell:hover ellipse {
+  fill: var(--paper);
+}
+
+.cards {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 720px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cards article {
+  border: 1px solid #d9ccb6;
+  padding: 1rem 1.1rem 0.4rem;
+}
+
+.hope {
+  border-top: 1px solid #d9ccb6;
+  border-bottom: 1px solid #d9ccb6;
+  padding: 1.5rem 0;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin: 1.2rem 0 0.6rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: system-ui, sans-serif;
+  font-size: 0.82rem;
+}
+
+th,
+td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.65rem 0.7rem;
+  border-bottom: 1px solid #d9ccb6;
+}
+
+th {
+  font-weight: 600;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+td a {
+  color: var(--moss);
+}
+
+.path {
+  font-family: system-ui, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: var(--moss);
+}
+
+.gap {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.disclaimer {
+  font-family: system-ui, sans-serif;
+  font-size: 0.72rem;
+  line-height: 1.45;
+  color: var(--muted);
+  max-width: 40rem;
+  margin-top: 0.75rem;
+}
+
+footer {
+  padding: 1.5rem 6vw 2.5rem;
+  font-family: system-ui, sans-serif;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
