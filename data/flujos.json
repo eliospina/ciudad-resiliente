@@ -2,9 +2,22 @@
   "updated": "2026-08-17",
   "flows": [
     {
+      "id": "ofertas-agregado",
+      "origin": "Agregado gubernamental de ofertas internacionales",
+      "amount": "US$1.300 millones (ofertas, no un solo giro)",
+      "status": "Bolsa reportada por el Gobierno: mezcla créditos, donaciones y asistencia técnica. No es dinero ya ejecutado en territorio.",
+      "route": "Oferta → negociación / desembolso / especie — cada tramo debe verificarse aparte",
+      "territory": "Nacional",
+      "executed": "Información no disponible",
+      "source": {
+        "name": "Infobae, 12 ago 2026 (vicepresidencia)",
+        "url": "https://www.infobae.com/colombia/2026/08/12/gobierno-nacional-anuncio-que-le-han-recibido-ofertas-de-ayuda-internacional-por-us1300-millones-tras-el-terremoto-en-colombia-en-que-consiste/"
+      }
+    },
+    {
       "id": "andi-empresas-unidas",
       "origin": "ANDI — Empresas Unidas por Colombia",
-      "amount": "201.637 millones de pesos (~64 millones de USD)",
+      "amount": "201.637 millones de pesos (~64 millones de USD) — donación anunciada",
       "status": "Anunciado · en fiducia",
       "route": "Empresarios → fiducia gremial → comunidades afectadas",
       "territory": "Nacional (Chocó, Valle, Risaralda y otros)",
@@ -28,9 +41,9 @@
       }
     },
     {
-      "id": "banco-mundial",
-      "origin": "Banco Mundial",
-      "amount": "700.000 USD",
+      "id": "banco-mundial-donacion",
+      "origin": "Banco Mundial — donación humanitaria",
+      "amount": "700.000 USD — donación (no es el crédito)",
       "status": "Asignado",
       "route": "350.000 Cruz Roja · 200.000 evaluación de daños · 150.000 apoyo técnico",
       "territory": "Nacional",
@@ -41,9 +54,87 @@
       }
     },
     {
+      "id": "banco-mundial-catddo",
+      "origin": "Banco Mundial — crédito Cat DDO",
+      "amount": "200 millones de USD — CRÉDITO desembolsado (se paga; 20 años, gracia 5)",
+      "status": "Desembolsado 13 ago 2026. Hay hasta 250 millones adicionales no solicitados aún (total posible 450).",
+      "route": "Línea contingente de gestión del riesgo → Tesoro nacional → respuesta y reconstrucción",
+      "territory": "Nacional",
+      "executed": "Desembolso al Gobierno reportado; ejecución en territorio: Información no disponible",
+      "source": {
+        "name": "Grupo Banco Mundial, 14 ago 2026 · El Tiempo",
+        "url": "https://www.bancomundial.org/es/news/statement/2026/08/14/world-bank-group-statement-on-colombia-earthquake"
+      }
+    },
+    {
+      "id": "bid-credito",
+      "origin": "Grupo BID — financiamiento contingente",
+      "amount": "Hasta 300 millones de USD — CRÉDITO / línea de emergencia (no es donación)",
+      "status": "Línea activada (11 ago 2026). No es un giro automático.",
+      "route": "BID → Gobierno · financiamiento rápido para emergencia",
+      "territory": "Nacional",
+      "executed": "Información no disponible",
+      "source": {
+        "name": "EFE, 11 ago 2026",
+        "url": "https://es-us.noticias.yahoo.com/bid-activa-300-millones-d%C3%B3lares-201943675.html"
+      }
+    },
+    {
+      "id": "bid-donacion",
+      "origin": "Grupo BID — asistencia humanitaria",
+      "amount": "500.000 USD — donación no reembolsable",
+      "status": "Anunciado (listos para aportar)",
+      "route": "Asistencia humanitaria y evaluación de daños",
+      "territory": "Nacional",
+      "executed": "Información no disponible",
+      "source": {
+        "name": "EFE, 11 ago 2026",
+        "url": "https://es-us.noticias.yahoo.com/bid-activa-300-millones-d%C3%B3lares-201943675.html"
+      }
+    },
+    {
+      "id": "caf",
+      "origin": "CAF — Banco de Desarrollo de América Latina",
+      "amount": "500.000 USD — donación",
+      "status": "Anunciado (11 ago 2026)",
+      "route": "Fondos de Desarrollo Social y Humano de CAF → atención humanitaria",
+      "territory": "Nacional",
+      "executed": "Información no disponible",
+      "source": {
+        "name": "El Tiempo, 11 ago 2026",
+        "url": "https://www.eltiempo.com/economia/sectores/caf-dona-500-000-dolares-a-colombia-para-atender-la-emergencia-tras-terremoto-3577656"
+      }
+    },
+    {
+      "id": "estados-unidos",
+      "origin": "Estados Unidos",
+      "amount": "26,5 millones de USD — donación humanitaria anunciada (15,5 + 11 adicionales)",
+      "status": "Anunciado por el Departamento de Estado (total al 15 ago 2026)",
+      "route": "Alimentos, salud, protección, refugio y evaluaciones · socios humanitarios; también equipos de búsqueda (Fairfax y Los Ángeles)",
+      "territory": "Información no disponible",
+      "executed": "Información no disponible",
+      "source": {
+        "name": "Anadolu / Departamento de Estado, ago 2026",
+        "url": "https://www.aa.com.tr/en/americas/us-announces-additional-11m-in-aid-to-colombia-for-quake-relief/4027890"
+      }
+    },
+    {
+      "id": "emiratos",
+      "origin": "Emiratos Árabes Unidos",
+      "amount": "10 millones de USD — donación anunciada",
+      "status": "Anunciado (13 ago 2026)",
+      "route": "Agencia de Ayuda de EAU · insumos médicos, alimentos y refugio",
+      "territory": "Valle del Cauca y Risaralda (según el presidente colombiano en X / EFE)",
+      "executed": "Información no disponible",
+      "source": {
+        "name": "The National / WAM, 13 ago 2026",
+        "url": "https://www.thenationalnews.com/news/uae/2026/08/13/president-sheikh-mohamed-directs-10-million-in-humanitarian-aid-to-colombian-earthquake-relief-efforts/"
+      }
+    },
+    {
       "id": "italia",
       "origin": "Italia — Ministerio de Asuntos Exteriores / AICS",
-      "amount": "4,5 millones de euros",
+      "amount": "4,5 millones de euros — donación anunciada",
       "status": "Autorizado (14 ago 2026)",
       "route": "1,5 millones vía Cruz Roja, FAO y PMA · 3 millones vía Agencia Italiana de Cooperación (resiliencia comunitaria)",
       "territory": "Información no disponible (regiones afectadas)",
@@ -51,6 +142,71 @@
       "source": {
         "name": "EFE / swissinfo, 14 ago 2026",
         "url": "https://www.swissinfo.ch/spa/italia-activa-paquetes-de-ayuda-humanitaria-a-colombia-por-valor-de-4%2c5-millones-de-euros/91900578"
+      }
+    },
+    {
+      "id": "union-europea",
+      "origin": "Comisión Europea (ayuda humanitaria de emergencia)",
+      "amount": "2,1 millones de euros — donación anunciada",
+      "status": "Anunciado (12 ago 2026)",
+      "route": "Socios en terreno: salud, agua, refugio, alimentos, efectivo",
+      "territory": "Centro y occidente; un tramo Cruz Roja Alemana en Chocó y Valle",
+      "executed": "Información no disponible (salvo 100.000 euros reasignados a 2.500 familias en Chocó y Valle, según la Comisión)",
+      "source": {
+        "name": "Comisión Europea, 12 ago 2026",
+        "url": "https://civil-protection-humanitarian-aid.ec.europa.eu/news-stories/news/eu-provides-eur21-million-emergency-humanitarian-assistance-colombia-following-earthquake-2026-08-12_en"
+      }
+    },
+    {
+      "id": "espana",
+      "origin": "España",
+      "amount": "1 millón de euros — donación anunciada",
+      "status": "Movilizado (14 ago 2026)",
+      "route": "500.000 Cruz Roja · 300.000 compra local · 150.000 OPS · 50.000 Fundación Reina Sofía (medicamentos)",
+      "territory": "Chocó, Risaralda, Caldas, Valle, Quindío (prioridades citadas)",
+      "executed": "Información no disponible (embajador dijo envío desde Bogotá hacia zonas afectadas)",
+      "source": {
+        "name": "El Español / EFE, 14 ago 2026",
+        "url": "https://www.elespanol.com/mundo/america/20260814/espana-moviliza-millon-euros-ayuda-humanitaria-afectados-terremoto-colombia/1003744352762_0.html"
+      }
+    },
+    {
+      "id": "reino-unido",
+      "origin": "Reino Unido",
+      "amount": "680.000 libras (~3.000 millones de pesos) — donación anunciada",
+      "status": "Anunciado (17 ago 2026)",
+      "route": "Cruz Roja Colombiana y equipo humanitario de la ONU · refugio, salud, agua, saneamiento",
+      "territory": "Información no disponible",
+      "executed": "Información no disponible",
+      "source": {
+        "name": "Infobae, 17 ago 2026",
+        "url": "https://www.infobae.com/colombia/2026/08/17/reino-unido-y-japon-se-unen-al-apoyo-humanitario-en-colombia-tras-el-terremoto/"
+      }
+    },
+    {
+      "id": "china",
+      "origin": "China",
+      "amount": "1 millón de USD + insumos por 15 millones de yuanes (~2 millones de euros)",
+      "status": "Ofrecido (13 ago 2026)",
+      "route": "Ayuda financiera e insumos de emergencia · coordinación con enlace colombiano",
+      "territory": "Información no disponible",
+      "executed": "Información no disponible",
+      "source": {
+        "name": "El Tiempo / embajada de China, 13 ago 2026",
+        "url": "https://www.eltiempo.com/mundo/asia/china-anuncia-1-millon-de-dolares-y-15-millones-de-yuanes-en-ayuda-humanitaria-para-damnificados-por-el-terremoto-de-7-4-de-magnitud-en-colombia-3578237"
+      }
+    },
+    {
+      "id": "noruega",
+      "origin": "Noruega",
+      "amount": "10 millones de coronas (~1 millón de USD) — donación anunciada",
+      "status": "Anunciado",
+      "route": "Salud, agua, albergue temporal · a través de socios humanitarios",
+      "territory": "Información no disponible",
+      "executed": "Información no disponible",
+      "source": {
+        "name": "EFE, 14 ago 2026",
+        "url": "https://www.infobae.com/america/agencias/2026/08/14/noruega-y-suecia-destinaran-15-millones-de-dolares-a-ayudar-a-colombia-tras-el-terremoto/"
       }
     },
     {
@@ -67,29 +223,133 @@
       }
     },
     {
-      "id": "noruega",
-      "origin": "Noruega",
-      "amount": "10 millones de coronas (~1 millón de USD)",
-      "status": "Anunciado",
-      "route": "Salud, agua, albergue temporal · a través de socios humanitarios",
+      "id": "alemania",
+      "origin": "Alemania",
+      "amount": "3.000 kits de cocina y 2.500 filtros de agua — en especie (sin caja publicada)",
+      "status": "Enviado / canalizado (17 ago 2026)",
+      "route": "Mecanismo de Protección Civil de la UE",
       "territory": "Información no disponible",
       "executed": "Información no disponible",
       "source": {
-        "name": "EFE, 14 ago 2026",
-        "url": "https://www.infobae.com/america/agencias/2026/08/14/noruega-y-suecia-destinaran-15-millones-de-dolares-a-ayudar-a-colombia-tras-el-terremoto/"
+        "name": "Europa Press / Comisión Europea, 17 ago 2026",
+        "url": "https://www.europapress.es/internacional/noticia-bruselas-coordina-entrega-ayuda-paises-ue-colombia-terremoto-20260817173438.html"
       }
     },
     {
-      "id": "union-europea",
-      "origin": "Comisión Europea (ayuda humanitaria de emergencia)",
-      "amount": "2,1 millones de euros",
-      "status": "Anunciado (12 ago 2026)",
-      "route": "Socios en terreno: salud, agua, refugio, alimentos, efectivo",
-      "territory": "Centro y occidente; un tramo Cruz Roja Alemana en Chocó y Valle",
-      "executed": "Información no disponible (salvo 100.000 euros reasignados a 2.500 familias en Chocó y Valle, según la Comisión)",
+      "id": "luxemburgo",
+      "origin": "Luxemburgo",
+      "amount": "79 tiendas de campaña — en especie (sin caja publicada)",
+      "status": "Ofrecido / canalizado (17 ago 2026)",
+      "route": "Mecanismo de Protección Civil de la UE",
+      "territory": "Información no disponible",
+      "executed": "Información no disponible",
       "source": {
-        "name": "Comisión Europea, 12 ago 2026",
-        "url": "https://civil-protection-humanitarian-aid.ec.europa.eu/news-stories/news/eu-provides-eur21-million-emergency-humanitarian-assistance-colombia-following-earthquake-2026-08-12_en"
+        "name": "Europa Press / Comisión Europea, 17 ago 2026",
+        "url": "https://www.europapress.es/internacional/noticia-bruselas-coordina-entrega-ayuda-paises-ue-colombia-terremoto-20260817173438.html"
+      }
+    },
+    {
+      "id": "el-salvador",
+      "origin": "El Salvador",
+      "amount": "100 toneladas en dos aviones (alimentos, kits, medicamentos) — en especie",
+      "status": "Enviado; primer vuelo recibido en Cali (12 ago 2026)",
+      "route": "Gobierno de El Salvador → Cali → distribución",
+      "territory": "Cali / zonas afectadas (detalle municipal: Información no disponible)",
+      "executed": "Llegada a Cali reportada por Cancillería; distribución final: Información no disponible",
+      "source": {
+        "name": "Infobae / Cancillería, 12 ago 2026",
+        "url": "https://www.infobae.com/el-salvador/2026/08/12/el-salvador-envio-el-segundo-avion-completando-100-toneladas-de-ayuda-a-colombia-tras-el-sismo/"
+      }
+    },
+    {
+      "id": "india",
+      "origin": "India",
+      "amount": "20 toneladas de insumos médicos — en especie (sin caja publicada)",
+      "status": "Enviado / anunciado",
+      "route": "Suministros médicos",
+      "territory": "Información no disponible",
+      "executed": "Información no disponible",
+      "source": {
+        "name": "Infobae, 14 ago 2026",
+        "url": "https://www.infobae.com/colombia/2026/08/14/aumenta-la-ayuda-internacional-a-colombia-tras-el-terremoto-de-74-india-envia-20-toneladas-y-noruega-suecia-y-espana-anuncian-nuevos-recursos/"
+      }
+    },
+    {
+      "id": "peru",
+      "origin": "Perú",
+      "amount": "12,5 toneladas de suministros + 62 rescatistas — en especie",
+      "status": "Anunciado (vicepresidencia de Colombia)",
+      "route": "Avión de suministros y equipo de rescate",
+      "territory": "Información no disponible",
+      "executed": "Información no disponible",
+      "source": {
+        "name": "Infobae, 12 ago 2026",
+        "url": "https://www.infobae.com/colombia/2026/08/12/gobierno-nacional-anuncio-que-le-han-recibido-ofertas-de-ayuda-internacional-por-us1300-millones-tras-el-terremoto-en-colombia-en-que-consiste/"
+      }
+    },
+    {
+      "id": "ecuador",
+      "origin": "Ecuador",
+      "amount": "47 rescatistas, perros y equipos del Cuerpo de Bomberos de Quito — en especie",
+      "status": "Anunciado (vicepresidencia de Colombia)",
+      "route": "Personal y equipos de búsqueda y rescate",
+      "territory": "Información no disponible",
+      "executed": "Información no disponible",
+      "source": {
+        "name": "Infobae, 12 ago 2026",
+        "url": "https://www.infobae.com/colombia/2026/08/12/gobierno-nacional-anuncio-que-le-han-recibido-ofertas-de-ayuda-internacional-por-us1300-millones-tras-el-terremoto-en-colombia-en-que-consiste/"
+      }
+    },
+    {
+      "id": "japon",
+      "origin": "Japón",
+      "amount": "Información no disponible (carpas, cobijas, etc.)",
+      "status": "Anunciado (17 ago 2026)",
+      "route": "JICA, a solicitud del Gobierno de Colombia",
+      "territory": "Información no disponible",
+      "executed": "Información no disponible",
+      "source": {
+        "name": "Infobae / Embajada de Japón, 17 ago 2026",
+        "url": "https://www.infobae.com/colombia/2026/08/17/reino-unido-y-japon-se-unen-al-apoyo-humanitario-en-colombia-tras-el-terremoto/"
+      }
+    },
+    {
+      "id": "mexico",
+      "origin": "México",
+      "amount": "Información no disponible (vuelo hacia zonas afectadas)",
+      "status": "Ofrecido / en tránsito según canciller Bula",
+      "route": "Vuelo de ayuda · detalle no publicado en la fuente",
+      "territory": "Información no disponible",
+      "executed": "Información no disponible",
+      "source": {
+        "name": "El Colombiano / Cancillería",
+        "url": "https://www.elcolombiano.com/internacional/china-ofrece-ayuda-humanitaria-para-colombia-terremoto-EL39899481"
+      }
+    },
+    {
+      "id": "paises-sin-monto",
+      "origin": "Otros países que ofrecieron ayuda (monto no publicado en las fuentes de esta página)",
+      "amount": "Información no disponible",
+      "status": "Oferta o solidaridad reportada, sin cifra verificable aquí: Argentina, Bolivia, Brasil, Chile, Costa Rica, Cuba, Guatemala, Honduras, Israel, Panamá, Portugal, Catar, Suiza, Turquía, Ucrania, Venezuela. Francia e Irlanda enviaron condolencias; no hallamos monto de ayuda.",
+      "route": "Equipos, especie o dinero — sin desglose público consolidado",
+      "territory": "Información no disponible",
+      "executed": "Información no disponible",
+      "source": {
+        "name": "Canciller Bula / El Colombiano · Portafolio · Infobae vicepresidencia",
+        "url": "https://www.elcolombiano.com/internacional/china-ofrece-ayuda-humanitaria-para-colombia-terremoto-EL39899481"
+      }
+    },
+    {
+      "id": "toneladas-nacionales",
+      "origin": "Donaciones en especie (agregado nacional, no es un país)",
+      "amount": "Más de 1.800 toneladas reportadas",
+      "status": "Movilización ciudadana y gremial (no es caja internacional)",
+      "route": "Donantes → acopio → zonas afectadas",
+      "territory": "Nacional",
+      "executed": "Información no disponible (toneladas acopiadas ≠ toneladas entregadas a cada familia)",
+      "source": {
+        "name": "Semana",
+        "url": "https://www.semana.com/nacion/articulo/mas-de-1800-toneladas-de-donaciones-la-movilizacion-sin-precedentes-tras-el-terremoto-en-colombia/202657/"
       }
     },
     {
@@ -114,7 +374,7 @@
       "territory": "Risaralda",
       "executed": "Información no disponible",
       "source": {
-        "name": "Sin fuente pública consolidada en este laboratorio",
+        "name": "Sin fuente pública consolidada en esta página",
         "url": ""
       }
     },
@@ -127,7 +387,7 @@
       "territory": "Valle",
       "executed": "Información no disponible",
       "source": {
-        "name": "Sin fuente pública consolidada en este laboratorio",
+        "name": "Sin fuente pública consolidada en esta página",
         "url": ""
       }
     },
@@ -140,7 +400,7 @@
       "territory": "Chocó",
       "executed": "Información no disponible",
       "source": {
-        "name": "Sin fuente pública consolidada en este laboratorio",
+        "name": "Sin fuente pública consolidada en esta página",
         "url": ""
       }
     }

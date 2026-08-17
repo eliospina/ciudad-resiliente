@@ -10,103 +10,180 @@
     <header class="hero">
       <img
         src="public/ciudad-ovalo.png"
-        alt="Ciudad ovalada con una nave de luz en el centro, células verdes y montañas."
+        alt="Ciudad ovalada con un núcleo de vida en el centro, células verdes y montañas."
       />
       <div class="hero-copy">
-        <p class="kicker">Laboratorio abierto · Risaralda · Valle · Chocó</p>
-        <h1>Una ciudad ovalada.<br />Una nave en el centro.<br />Células que se sostienen.</h1>
-        <p class="lead">
-          Fundamos una forma: comunidades que se sostienen, unidas al verde, a la
-          luz y al agua. El centro es una nave. La gente entra.
-        </p>
+        <p class="kicker">Risaralda · Valle · Chocó</p>
+        <h1>Hacemos la ciudad.</h1>
+        <p class="lead">Óvalo de células. En el centro, un núcleo de vida.</p>
+        <ul class="pillars">
+          <li>Sostenibilidad</li>
+          <li>Energía solar</li>
+          <li>Lo autóctono</li>
+          <li>Territorialidad</li>
+          <li>Identidad cultural</li>
+          <li>Educación</li>
+          <li>Agricultura</li>
+        </ul>
       </div>
     </header>
 
     <main>
-      <section class="split">
-        <div>
-          <h2>El óvalo</h2>
-          <p>
-            Elige una célula. El centro no es un palacio: es una nave abierta a todas
-            las tradiciones, un ágora que no le pertenece a nadie.
-          </p>
-          <p id="cell-note" class="note">
-            Toca el óvalo. Cada anillo es una comunidad que produce, cuida y se
-            conecta con las demás.
-          </p>
+      <section class="split" id="ovalo-lesson" data-layer="habitar">
+        <div class="split-copy">
+          <div class="layers" role="tablist" aria-label="Capas del óvalo">
+            <button type="button" id="layer-habitar" aria-pressed="true">
+              1. Habitar
+            </button>
+            <button type="button" id="layer-territorio" aria-pressed="false">
+              2. Territorio
+            </button>
+          </div>
+          <h2 id="layer-title">Habitar</h2>
+          <p id="layer-lead">Se camina entre árboles. El suelo manda.</p>
+          <div id="habitar-panel">
+            <div class="chips" id="habitar-chips"></div>
+          </div>
+          <div id="territorio-panel" hidden>
+            <p class="path hacer-path" id="hacer-path">
+              <button type="button" data-id="fase-celula">1. Primera célula</button>
+              <span aria-hidden="true">→</span>
+              <button type="button" data-id="fase-red">2. Unir</button>
+              <span aria-hidden="true">→</span>
+              <button type="button" data-id="fase-nucleo">3. Núcleo</button>
+              <span aria-hidden="true">→</span>
+              <button type="button" data-id="fase-suelo">4. Tres suelos</button>
+            </p>
+            <div class="cards soils" id="soil-cards">
+              <article data-soil="risaralda" tabindex="0" role="button">
+                <h3>Risaralda</h3>
+                <p>1200–1800 m. Ladera, sismo, alud.</p>
+              </article>
+              <article data-soil="valle" tabindex="0" role="button">
+                <h3>Valle</h3>
+                <p>900–1100 m. Río, calor, crecida.</p>
+              </article>
+              <article data-soil="choco" tabindex="0" role="button">
+                <h3>Chocó</h3>
+                <p>Cota baja. Selva, lluvia, río-camino.</p>
+              </article>
+            </div>
+            <p id="soil-note" class="soil-note">
+              Toca un suelo: sitio, agua, luz, huerta.
+            </p>
+            <p class="path waste-path" id="waste-path" hidden>
+              Separación en origen → dos metabolismos → compost higiénico →
+              fracción técnica limpia → RCD a agregado → residual publicado
+            </p>
+            <p class="chip-label">Valores</p>
+            <div class="chips" id="valor-chips"></div>
+            <p class="chip-label">Vida en común</p>
+            <div class="chips" id="vida-chips"></div>
+            <p class="chip-label">Oficios de la célula</p>
+            <div class="chips" id="system-chips"></div>
+            <p class="chip-label">Metabolismo</p>
+            <div class="chips" id="waste-chips"></div>
+          </div>
+          <div class="lesson">
+            <p id="lesson-q" class="question">¿Cómo se vive aquí?</p>
+            <p id="lesson-a" class="note">
+              El agua se bebe y vuelve. Se camina entre árboles.
+            </p>
+            <p id="lesson-links" class="connects">Agua · verde</p>
+          </div>
+          <div class="lesson-bar">
+            <button type="button" id="tour-btn">Recorrer</button>
+            <button type="button" id="hacer-btn">Hacer</button>
+            <button type="button" id="valores-btn">Valores</button>
+            <button type="button" id="vida-btn">Vida en común</button>
+            <button type="button" id="waste-btn">Residuos bajos</button>
+            <span id="tour-step" class="tour-step" hidden></span>
+          </div>
         </div>
         <figure class="oval-wrap">
-          <svg id="ovalo" viewBox="0 0 400 280" role="img" aria-label="Plano ovalado de la ciudad">
+          <svg id="ovalo" viewBox="0 0 400 280" data-layer="habitar" aria-label="Plano ovalado de la ciudad">
+            <ellipse class="green-wash" cx="200" cy="140" rx="188" ry="122" />
             <ellipse class="ring" cx="200" cy="140" rx="188" ry="122" />
             <ellipse class="ring" cx="200" cy="140" rx="148" ry="96" />
             <ellipse class="ring" cx="200" cy="140" rx="104" ry="68" />
-            <g class="cell" data-id="naturaleza" transform="translate(200 38)">
-              <circle r="16" />
-              <text y="4">verde</text>
+            <g class="flows" aria-hidden="true">
+              <path class="flow" data-nodes="agua naturaleza" d="M330 190 Q 280 90 200 38" />
+              <path class="flow" data-nodes="naturaleza alimento" d="M200 38 Q 110 40 70 90" />
+              <path class="flow" data-nodes="agua nucleo" d="M330 190 Q 280 180 200 140" />
+              <path class="flow" data-nodes="energia nucleo" d="M318 90 Q 270 100 200 140" />
+              <path class="flow" data-nodes="alimento nucleo" d="M70 90 Q 120 110 200 140" />
+              <path class="flow" data-nodes="vivienda nucleo" d="M58 190 Q 110 180 200 140" />
+              <path class="flow" data-nodes="escuela nucleo" d="M200 242 Q 200 200 200 140" />
+              <path class="flow" data-nodes="energia vivienda" d="M318 90 Q 180 140 58 190" />
+              <path class="flow" data-nodes="agua alimento" d="M330 190 Q 200 160 70 90" />
+              <path class="flow" data-nodes="escuela vivienda" d="M200 242 Q 100 230 58 190" />
+              <path class="flow" data-nodes="vivienda naturaleza" d="M58 190 Q 80 90 200 38" />
+              <path class="flow" data-nodes="salud nucleo" d="M125 228 Q 150 190 200 140" />
+              <path class="flow" data-nodes="salud vivienda" d="M125 228 Q 90 210 58 190" />
+              <path class="flow" data-nodes="salud escuela" d="M125 228 Q 160 240 200 242" />
             </g>
-            <g class="cell" data-id="energia" transform="translate(318 90)">
-              <circle r="16" />
-              <text y="4">luz</text>
+            <g class="cell" data-id="naturaleza" tabindex="0" role="button" aria-label="Verde">
+              <circle cx="200" cy="38" r="16" />
+              <text x="200" y="42">verde</text>
             </g>
-            <g class="cell" data-id="agua" transform="translate(330 190)">
-              <circle r="16" />
-              <text y="4">agua</text>
+            <g class="cell" data-id="energia" tabindex="0" role="button" aria-label="Luz">
+              <circle cx="318" cy="90" r="16" />
+              <text x="318" y="94">luz</text>
             </g>
-            <g class="cell" data-id="alimento" transform="translate(70 90)">
-              <circle r="16" />
-              <text y="4">comida</text>
+            <g class="cell" data-id="agua" tabindex="0" role="button" aria-label="Agua">
+              <circle cx="330" cy="190" r="16" />
+              <text x="330" y="194">agua</text>
             </g>
-            <g class="cell" data-id="vivienda" transform="translate(58 190)">
-              <circle r="16" />
-              <text y="4">casa</text>
+            <g class="cell" data-id="alimento" tabindex="0" role="button" aria-label="Alimentos">
+              <circle cx="70" cy="90" r="16" />
+              <text x="70" y="94">alimento</text>
             </g>
-            <g class="cell" data-id="escuela" transform="translate(200 242)">
-              <circle r="16" />
-              <text y="4">escuela</text>
+            <g class="cell" data-id="vivienda" tabindex="0" role="button" aria-label="Casa">
+              <circle cx="58" cy="190" r="16" />
+              <text x="58" y="194">casa</text>
             </g>
-            <g class="cell ship" data-id="nave" transform="translate(200 140)">
-              <ellipse rx="28" ry="16" />
-              <text y="4">nave</text>
+            <g class="cell" data-id="escuela" tabindex="0" role="button" aria-label="Escuela">
+              <circle cx="200" cy="242" r="16" />
+              <text x="200" y="246">escuela</text>
+            </g>
+            <g class="cell" data-id="salud" tabindex="0" role="button" aria-label="Salud">
+              <circle cx="125" cy="228" r="16" />
+              <text x="125" y="232">salud</text>
+            </g>
+            <g class="cell nucleus" data-id="nucleo" tabindex="0" role="button" aria-label="Núcleo de vida">
+              <circle cx="200" cy="140" r="22" />
+              <text x="200" y="144">núcleo</text>
             </g>
           </svg>
         </figure>
       </section>
 
-      <section>
-        <h2>Tres suelos, una forma</h2>
-        <div class="cards">
-          <article>
-            <h3>Risaralda</h3>
-            <p>Colinas, café, sismo. El óvalo se planta sin borrar la montaña.</p>
-          </article>
-          <article>
-            <h3>Valle</h3>
-            <p>Río, densidades, calor. Las células se abren al agua y al valle.</p>
-          </article>
-          <article>
-            <h3>Chocó</h3>
-            <p>Selva, lluvia, ríos. La ciudad no conquista el verde: se teje con él.</p>
-          </article>
-        </div>
-      </section>
-
       <section class="hope">
-        <h2>El dinero y la forma</h2>
+        <h2>Caudal</h2>
         <p>
-          Entran recursos enormes para quienes perdieron la casa.
-          Si ese caudal existe, que funde ciudad: óvalo, células, nave, vida.
-          Quien administra con honestidad se alegra: la ciudadanía ve lo que hay.
+          Primero la célula. Luego la red. Luego el núcleo. Cada peso a la vista,
+          con fuente.
         </p>
       </section>
 
-      <section id="rastreador" class="tracker">
-        <h2>Rastreador de recursos</h2>
-        <p>
-          De dónde sale, por dónde pasa, si llegó al suelo. Lo anunciado no es lo ejecutado.
-        </p>
+      <section id="rastreador" class="tracker crystal">
+        <h2>Presupuesto de cristal</h2>
+        <p class="tracker-lede">Cada peso con origen, ruta, territorio y fuente.</p>
+        <ul class="crystal-keys">
+          <li>Lo anunciado no es lo ejecutado.</li>
+          <li>Crédito no es donación.</li>
+          <li>Oferta no es giro.</li>
+          <li>En especie no es caja.</li>
+        </ul>
         <div class="path">
-          Donante → fiducia o fondo → territorio → proyecto → célula
+          Donante → fondo → primera célula → red → núcleo
         </div>
+        <p id="pulso" class="pulso" aria-live="polite">
+          <span class="pulso-dot" aria-hidden="true"></span>
+          <span id="pulso-status">El tablero se verifica cada minuto. Sin fuente, no entra cifra.</span>
+        </p>
+        <p id="pulso-clock" class="pulso-clock">Aún no se ha leído el caudal.</p>
+        <ol id="pulso-events" class="pulso-events"></ol>
         <div class="table-wrap">
           <table>
             <thead>
@@ -131,15 +208,13 @@
       <section>
         <h2>Invitación</h2>
         <p>
-          Arquitectas, vecinos, universidades, gobiernos, niños. La ciudad se piensa
-          en común. El código será abierto. Hoy esto es una semilla: un óvalo, una nave,
-          la gente adentro.
+          Arquitectas, oficios, universidades, artistas, gobiernos. Código abierto.
         </p>
       </section>
     </main>
 
     <footer>
-      <p>Ciudad Resiliente · laboratorio de diseño · 2026</p>
+      <p>Ciudad Resiliente · Risaralda · Valle · Chocó · 2026</p>
     </footer>
     <script src="app.js"></script>
   </body>
