@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Deslotear — Ciudad Resiliente</title>
+    <meta
+      name="description"
+      content="No se aterriza un predio. Se planta un corte tipo en ladera pereirana. Hipótesis, no lote."
+    />
+    <meta property="og:title" content="No se aterriza. Se planta." />
+    <meta
+      property="og:description"
+      content="Corte tipo en ladera pereirana. Deslotear el plano. Arquitectas y ciudadanía."
+    />
+    <meta
+      property="og:image"
+      content="https://ciudad-resiliente.vercel.app/public/plant/plant-ladera.png"
+    />
+    <meta
+      property="og:url"
+      content="https://ciudad-resiliente.vercel.app/plantar.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://ciudad-resiliente.vercel.app/public/plant/plant-ladera.png"
+    />
+    <link rel="canonical" href="https://ciudad-resiliente.vercel.app/plantar.html" />
+    <link rel="stylesheet" href="plantar.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a href="index.html">← La ciudad</a>
+      <p id="film-count">1 / 6</p>
+      <div class="progress" aria-hidden="true"><span id="film-bar"></span></div>
+    </header>
+
+    <section class="film" aria-label="Proyección del corte tipo">
+      <div class="film-frame">
+        <img
+          id="film-image"
+          src="public/plant/plant-ladera.png"
+          alt="Célula tipo en ladera cafetera. No es un predio."
+        />
+      </div>
+      <div class="film-copy">
+        <p class="eyebrow" id="film-kicker">Corte tipo · Pereira</p>
+        <h1 id="film-title">No se aterriza.</h1>
+        <p id="film-text">Se planta. Cota 1.200–1.800 m. El predio es —.</p>
+        <div class="film-nav">
+          <button type="button" id="play" aria-pressed="false">Proyectar</button>
+          <button type="button" id="prev">Anterior</button>
+          <button type="button" id="next">Seguir</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="page">
+      <main>
+        <section>
+          <p class="wall">
+            Esto no es un lote. No es un caserío disperso. No es una nave en el
+            valle. Es un corte tipo: una primera célula compacta, a pie, en
+            ladera pereirana. Cubierta ligera: lámina anclada, no teja de barro.
+            El patio es umbral, no estadio. El núcleo de ciudad se dibuja después.
+            Sin folio, sin amenaza y sin el sí de quien habita, no se planta.
+          </p>
+          <h2>Deslotear.</h2>
+          <p>
+            El urbanismo vende manzana, vista y plusvalía. Aquí se deslotea:
+            primero un hábitat que cierra agua, luz, comida, escuela y salud.
+            Luego la red. El núcleo, después.
+          </p>
+          <p class="plain">
+            Municipio de trabajo: Pereira, hipótesis.
+            <a href="SITIO.md">El predio es —.</a>
+            El dibujo no adjudica. El cálculo junta edificio, cimentación y talud.
+          </p>
+        </section>
+
+        <section>
+          <h2>Plano tipo, no catastro</h2>
+          <p class="plain">
+            Cuarenta hogares en curva de nivel. Huerta, escuela y casa de salud
+            a pie. El óvalo es relación, no lindero. Sin nombre de vereda.
+          </p>
+          <figure class="plan-wrap">
+            <svg viewBox="0 0 640 420" role="img" aria-labelledby="plan-title plan-desc">
+              <title id="plan-title">Plano tipo de una célula en ladera pereirana</title>
+              <desc id="plan-desc">
+                Curvas de nivel, casas alineadas, huerta, escuela, casa de salud y cisterna.
+                No es un predio.
+              </desc>
+              <rect width="640" height="420" fill="#efe6d6" />
+              <ellipse cx="320" cy="210" rx="292" ry="188" fill="none" stroke="#c4b394" stroke-width="1" />
+              <ellipse cx="320" cy="214" rx="248" ry="158" fill="none" stroke="#b89f78" stroke-width="1.1" />
+              <ellipse cx="320" cy="218" rx="198" ry="124" fill="none" stroke="#a88858" stroke-width="1.2" />
+              <ellipse cx="320" cy="222" rx="138" ry="84" fill="none" stroke="#8a6a3a" stroke-width="1.3" />
+              <path d="M86 250 Q180 310 320 292 Q460 278 560 214" fill="none" stroke="#2f5344" stroke-width="2.2" />
+              <g fill="#d9c4a0" stroke="#1a1612" stroke-width="0.8">
+                <rect x="132" y="268" width="18" height="12" />
+                <rect x="168" y="284" width="18" height="12" />
+                <rect x="208" y="294" width="18" height="12" />
+                <rect x="248" y="300" width="18" height="12" />
+                <rect x="292" y="302" width="18" height="12" />
+                <rect x="336" y="298" width="18" height="12" />
+                <rect x="378" y="288" width="18" height="12" />
+                <rect x="418" y="272" width="18" height="12" />
+                <rect x="154" y="228" width="18" height="12" />
+                <rect x="198" y="214" width="18" height="12" />
+                <rect x="430" y="198" width="18" height="12" />
+                <rect x="468" y="214" width="18" height="12" />
+              </g>
+              <circle cx="320" cy="222" r="16" fill="#b8894a" stroke="#1a1612" />
+              <rect x="286" y="168" width="28" height="18" fill="#efe4d0" stroke="#1a1612" />
+              <rect x="348" y="168" width="28" height="18" fill="#efe4d0" stroke="#1a1612" />
+              <circle cx="214" y="168" r="14" fill="#2f5344" opacity="0.55" />
+              <circle cx="520" y="168" r="11" fill="#4a7a8a" opacity="0.7" />
+              <text x="320" y="226" text-anchor="middle" font-size="8" fill="#1a1612">patio</text>
+              <text x="300" y="162" text-anchor="middle" font-size="8" fill="#1a1612">escuela</text>
+              <text x="362" y="162" text-anchor="middle" font-size="8" fill="#1a1612">salud</text>
+              <text x="214" y="154" text-anchor="middle" font-size="8" fill="#1a1612">huerta</text>
+              <text x="520" y="154" text-anchor="middle" font-size="8" fill="#1a1612">agua</text>
+              <text x="88" y="28" font-size="11" fill="#1a1612">Primera célula · compacta · ladera 1.200–1.800 m</text>
+              <text x="88" y="46" font-size="10" fill="#6a6358">Patio al centro, no nave. Pereira, hipótesis. No es un predio.</text>
+              <text x="88" y="400" font-size="9" fill="#6a6358">~40 hogares a pie · cubierta ligera · el núcleo de ciudad todavía no</text>
+            </svg>
+          </figure>
+        </section>
+
+        <section>
+          <h2>Siete capas del corte</h2>
+          <p class="plain">De arriba hacia abajo. Sin medidas: aún no hay predio.</p>
+          <ol class="layers-list">
+            <li>Franja vegetada y dren interceptor.</li>
+            <li>Camino de inspección y evacuación en curva de nivel.</li>
+            <li>Cubierta-terraza ligera, registrable.</li>
+            <li>Núcleos rígidos a cimentaciones calculadas.</li>
+            <li>Módulos livianos con juntas.</li>
+            <li>Terrazas productivas sin saturar el talud.</li>
+            <li>Dren colector, fuera de la masa inestable.</li>
+          </ol>
+          <p class="plain">
+            El dibujo de guadua ayuda a ver. El kit de ladera no es palafito:
+            terrazas, núcleos alineados, cubierta ligera. No teja de barro:
+            en el sismo esa masa cae. NSR-10 no certifica esta forma sin cálculo.
+            <a href="PAPER-v0.2.md">Abrir el corte v0.2.</a>
+          </p>
+        </section>
+
+        <section>
+          <h2>El kit cambia con el aire y el suelo</h2>
+          <p class="plain">
+            Misma anatomía. Tres humedades. Tres montañas —o ninguna.
+          </p>
+          <div class="kit-grid">
+            <article>
+              <img
+                src="public/plant/plant-ladera.png"
+                alt="Primera célula compacta en ladera pereirana, patio al centro."
+              />
+              <h3>Pereira · ladera</h3>
+              <p>1.411 m. 21 °C. 2.750 mm de lluvia. Aire húmedo de montaña.</p>
+              <ul>
+                <li>Bahareque y guadua livianos: menos inercia sísmica. NSR-10 Títulos E y G.</li>
+                <li>Alero y primer lavado: la lluvia es agua y es empuje sobre el talud.</li>
+                <li>Ventilar, no sellar: hongos y humedad mandan el detalle.</li>
+                <li>No cicatriz de alud ni fondo de cañada.</li>
+              </ul>
+              <p class="src">
+                Concejo de Pereira, datos generales; NSR-10; UCP 2024, vivienda en ladera.
+              </p>
+            </article>
+            <article>
+              <img
+                src="public/plant/plant-valle.png"
+                alt="Casa de valle con sombra y retiro del río."
+              />
+              <h3>Valle · crecida</h3>
+              <p>900–1.100 m. Calor. Terraza alta. El río manda el retiro.</p>
+              <ul>
+                <li>Sombra primero: alero, cubierta ventilada, árbol.</li>
+                <li>Piso sobre la crecida de diseño. Hidráulica, no una distancia genérica.</li>
+                <li>Estrato inferior lavable. Lo crítico, arriba.</li>
+                <li>Huerta de mosaico; no caña única.</li>
+              </ul>
+              <p class="src">VISION.md · PAPER-v0.2, kit de valle. RAS y estudio hidráulico, pendientes.</p>
+            </article>
+            <article>
+              <img
+                src="public/plant/plant-choco.png"
+                alt="Palafitos bajo dosel junto al río."
+              />
+              <h3>Chocó · río-selva</h3>
+              <p>0–100 m. Lluvia, dosel, río-camino. El consejo es autoridad.</p>
+              <ul>
+                <li>Alto relativo al río. Palafito: humedad, crecida, bicho, paso.</li>
+                <li>Gran cubierta, cisterna tapada. Negras fuera del río.</li>
+                <li>Más batería: más nubes. Piezas que viajan por agua.</li>
+                <li>El monte vuelve solo: podar, sembrar, comer. No palma ni potrero.</li>
+              </ul>
+              <p class="src">Ley 70 de 1993 · PAPER-v0.2, kit Chocó. Sin el consejo, no hay sitio.</p>
+            </article>
+          </div>
+        </section>
+
+        <section>
+          <h2>Cómo suena la ciudad</h2>
+          <div class="call-split">
+            <article class="call-card">
+              <h3>Para arquitectas</h3>
+              <p class="sound">Edificio, cimentación y ladera: un solo cálculo.</p>
+              <p>
+                Dibuja el corte, no el lote. Tres kits. RCD solo si se ensaya.
+                Se costea la primera que vive.
+              </p>
+              <p>
+                <a href="paper.html">El paper</a>
+                ·
+                <a href="COSTO.md">El costo</a>
+                ·
+                <a href="compartir.html">El cartel</a>
+              </p>
+            </article>
+            <article class="call-card">
+              <h3>Para la ciudadanía</h3>
+              <p class="sound">Nosotras iniciamos. Ustedes tienen la voz.</p>
+              <p>
+                Camina la semilla. Propón una célula de tu suelo. Fírmala a la
+                vista. Un respaldo no es decreto ni urna.
+              </p>
+              <p>
+                <a href="recorrido.html">Caminar</a>
+                ·
+                <a href="plaza.html">La plaza</a>
+                ·
+                <a href="manifiesto.html">El manifiesto</a>
+              </p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <nav class="doors" aria-label="Dos oficios">
+          <a href="index.html">La ciudad</a>
+          <a href="plaza.html">Plaza</a>
+          <a href="observatorio.html">Observatorio</a>
+        </nav>
+        <p>Deslotear · corte tipo · el predio es —</p>
+      </footer>
+    </div>
+    <script src="plantar.js"></script>
+  </body>
+</html>

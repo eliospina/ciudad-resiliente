@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Observatorio — ayuda a Colombia</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="page-observatorio">
+    <header class="obs-hero">
+      <p class="kicker">Oficio aparte · economía</p>
+      <h1>Observatorio</h1>
+      <p class="lead">Lee la ayuda anunciada a Colombia. No es la caja de la ciudad soñada.</p>
+    </header>
+
+    <main>
+      <section id="observatorio" class="tracker crystal">
+        <p class="wall">
+          Observatorio independiente. Estas cifras son ayuda anunciada a
+          Colombia tras el terremoto. No son el presupuesto de Ciudad Resiliente.
+          Este oficio no las recibe, no las administra y no las solicita.
+        </p>
+        <p class="tracker-lede">
+          El hueco: lo anunciado no es lo desembolsado. Lo desembolsado no es
+          lo entregado en el municipio. Ese último tramo casi no tiene fuente.
+        </p>
+        <p class="plain observatorio-plain">
+          Lectura 18 ago 2026. Se verificaron anuncios y flujos publicados
+          entre el 10 y el 17 de agosto: crédito del Banco Mundial
+          (USD 200 millones desembolsados al Gobierno), CERF (USD 5 millones),
+          222,5 toneladas recibidas en Colombia y aportes bilaterales.
+          Llegada municipal concreta: cargamento chileno a Pereira; sin prueba
+          de entrega a hogares. Reino Unido y los demás anuncios siguen en —.
+          No apareció una actualización pública que cierre ese hueco.
+        </p>
+        <ul class="crystal-keys">
+          <li>Lo anunciado no es lo ejecutado.</li>
+          <li>Crédito no es donación.</li>
+          <li>Oferta no es giro.</li>
+          <li>En especie no es caja.</li>
+        </ul>
+        <p class="chip-label">Quién ya rastrea</p>
+        <ul class="source-map">
+          <li>
+            <a href="https://fts.unocha.org/plans/1500/clusters" target="_blank" rel="noreferrer">OCHA FTS</a>
+            — plata humanitaria a Colombia por clúster. No por municipio. No es un plan solo del sismo.
+          </li>
+          <li>
+            <a href="https://www.unocha.org/publications/report/colombia/colombia-flash-update-005-update-impact-earthquake-colombia-august-13-2026" target="_blank" rel="noreferrer">OCHA Colombia</a>
+            — flash updates y CERF. Afectados y huecos, no libro de ejecución.
+          </li>
+          <li>
+            <a href="https://caracol.com.co/2026/08/17/cooperacion-internacional-por-el-sismo-supera-las-220-toneladas-de-ayuda-humanitaria/" target="_blank" rel="noreferrer">Cancillería</a>
+            — toneladas y equipos que entran. Comunicado, no tablero.
+          </li>
+          <li>
+            <a href="https://portal.gestiondelriesgo.gov.co/paginas/contratacion-entidad.aspx" target="_blank" rel="noreferrer">UNGRD · SECOP</a>
+            — contratos de la Subcuenta Sismo 2026. Compra pública, no destino de cada donación.
+          </li>
+          <li>
+            <a href="https://cuidarcolombia.vercel.app/" target="_blank" rel="noreferrer">Cuidar a Colombia</a>
+            — canales para donar y acopios, con fuente. No sigue cuánto se ejecutó.
+          </li>
+          <li>
+            <a href="https://www.infobae.com/colombia/2026/08/17/jorge-eliecer-laverde-nuevo-contralor-anuncia-unidad-especial-para-vigilar-recursos-de-reconstruccion-tras-el-terremoto/" target="_blank" rel="noreferrer">Contraloría</a>
+            — unidad de auditoría anunciada. Control fiscal, aún no tablero ciudadano.
+          </li>
+        </ul>
+        <p class="chip-label">Lo que este tablero lee</p>
+        <p class="plain observatorio-plain">
+          Prensa y comunicados con URL. Si el destino municipal no está en la
+          fuente, la celda va en —. No competimos con FTS ni con Cuidar a Colombia.
+        </p>
+        <div class="path">
+          Donante → Gobierno, fiducia u organismo → territorio afectado
+        </div>
+        <p id="pulso" class="pulso" aria-live="polite">
+          <span class="pulso-dot" aria-hidden="true"></span>
+          <span id="pulso-status">Observatorio de ayuda a Colombia. Sin fuente, no entra cifra.</span>
+        </p>
+        <p id="pulso-clock" class="pulso-clock">Aún no se ha leído el caudal.</p>
+        <ol id="pulso-events" class="pulso-events"></ol>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Origen</th>
+                <th scope="col">Monto</th>
+                <th scope="col">Ruta</th>
+                <th scope="col">Territorio</th>
+                <th scope="col">Ejecutado</th>
+                <th scope="col">Fuente</th>
+              </tr>
+            </thead>
+            <tbody id="flujos-body"></tbody>
+          </table>
+        </div>
+        <p class="table-legend">— = sin dato con fuente pública verificada</p>
+        <p class="disclaimer">
+          Observatorio cívico, no ventanilla. No somos donantes, ni operadores,
+          ni beneficiarios de estos fondos. Esta página informa; no regula, no
+          acusa y no certifica desembolsos. No señalamos a nadie. Toda cifra
+          debe verificarse por quien la lea ante su fuente original. Si la
+          fuente no está, la celda va en —.
+        </p>
+      </section>
+
+      <section id="comunidad">
+        <h2>Cómo se lee en común</h2>
+        <p>
+          No se vota el destino de la plata. Se verifica. Quien habita el
+          municipio puede traer fuente, testigo o disputa.
+        </p>
+        <p class="plain">
+          Un rumor no entra. Sin URL, el anuncio y el desembolso van en —.
+          El testigo nombra lugar y fecha; no denuncia a una persona. Crédito
+          no es donación. Oferta no es giro.
+        </p>
+        <ol class="steps">
+          <li>Traer una fuente — URL pública, monto, territorio.</li>
+          <li>Testigo — en mi municipio llegó o no llegó. Lugar, fecha.</li>
+          <li>Disputar — esta cifra es crédito, especie u oferta, no caja.</li>
+        </ol>
+        <form class="civic-form" id="form-ayuda">
+          <label>
+            Oficio
+            <select name="kind" required>
+              <option value="anuncio">Traer fuente · anuncio</option>
+              <option value="desembolso">Traer fuente · desembolso</option>
+              <option value="testigo">Testigo de territorio</option>
+              <option value="disputa">Disputar una cifra</option>
+              <option value="credito">Marcar como crédito</option>
+              <option value="especie">Marcar como especie</option>
+            </select>
+          </label>
+          <label>
+            Origen o lugar
+            <input name="origin" required placeholder="Donante, municipio, vereda" />
+          </label>
+          <label>
+            Monto (si aplica)
+            <input name="amount" placeholder="USD … / COP … / —" />
+          </label>
+          <label>
+            Territorio
+            <input name="territory" required placeholder="Risaralda, Valle, Chocó o municipio" />
+          </label>
+          <label>
+            Fuente (URL)
+            <input name="url" type="url" placeholder="https://" />
+          </label>
+          <label>
+            Nota
+            <textarea name="note" rows="3" placeholder="Qué dice la fuente, o qué viste. Sin acusar nombres."></textarea>
+          </label>
+          <button type="submit" id="ayuda-btn">Copiar el registro</button>
+        </form>
+        <pre class="civic-out" id="ayuda-out" hidden></pre>
+        <p class="copied" id="ayuda-status" role="status"></p>
+        <p class="plain">
+          El registro se pega en <code>data/pulso.json</code> cuando el repo
+          sea público. Hasta entonces, es tu verificación firmada. La ciudad
+          soñada no recibe estos fondos:
+          <a href="plaza.html">allá se propone la célula</a>.
+        </p>
+      </section>
+
+      <section id="invitar">
+        <h2>Invitación</h2>
+        <p>Economía, contaduría, universidades de economía.</p>
+        <p class="plain">
+          Este oficio verifica fuentes. No pide caja. No vota girar un peso.
+          La ciudad soñada es
+          <a href="plaza.html">la plaza</a>.
+        </p>
+        <ul class="invite-doors">
+          <li>
+            <a href="#comunidad">Leer con la comunidad</a>
+            — fuente, testigo o disputa. Sin URL, no entra cifra.
+          </li>
+          <li>
+            <a href="plaza.html">Proponer una célula</a>
+            — otro oficio. Allá se diseña y se respalda.
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <nav class="doors" aria-label="Dos oficios">
+        <a href="index.html">La ciudad</a>
+        <a href="plaza.html">Plaza</a>
+        <a href="observatorio.html" aria-current="page">Observatorio</a>
+      </nav>
+      <p>Observatorio de ayuda a Colombia · 2026 · no es Ciudad Resiliente</p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Camina una primera célula de Ciudad Resiliente. Propuesta, no el barrio de hoy. Casa, agua, huerta, materia prima, suelo y núcleo."
+    />
+    <meta property="og:title" content="Se camina." />
+    <meta
+      property="og:description"
+      content="Una esperanza habitable. Casa, agua, comida, escuela y salud a pie. Nosotras iniciamos; la plaza decide."
+    />
+    <meta
+      property="og:image"
+      content="https://ciudad-resiliente.vercel.app/public/cartel-ciudad.png"
+    />
+    <meta
+      property="og:url"
+      content="https://ciudad-resiliente.vercel.app/recorrido.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://ciudad-resiliente.vercel.app/public/cartel-ciudad.png"
+    />
+    <link rel="canonical" href="https://ciudad-resiliente.vercel.app/recorrido.html" />
+    <title>Entrar a la ciudad — Ciudad Resiliente</title>
+    <link rel="stylesheet" href="recorrido.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a href="index.html" class="back" aria-label="Volver a Ciudad Resiliente">← La ciudad</a>
+      <p id="progress-label">Una esperanza habitable</p>
+      <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+    </header>
+
+    <main>
+      <section class="intro" id="intro">
+        <div class="intro-image" role="img" aria-label="Primera célula compacta en ladera, patio al centro, no la ciudad entera"></div>
+        <div class="intro-copy">
+          <p class="eyebrow">A pie · 10 paradas</p>
+          <h1>Se camina.</h1>
+          <p>
+            Esto es una propuesta. No es tu casa hoy. Una esperanza de cómo
+            habitar después del terremoto: casa, agua, comida, escuela y salud
+            cerca. La tecnología acompaña; la comunidad decide.
+          </p>
+          <button type="button" id="enter">Entrar</button>
+          <small>Simulación para conversar. No es una obra aprobada.</small>
+        </div>
+      </section>
+
+      <section class="experience" id="experience" hidden>
+        <div class="map-panel">
+          <p class="map-instruction">Toca un lugar o sigue el camino.</p>
+          <svg id="walk-map" viewBox="0 0 600 440" role="img" aria-labelledby="map-title map-desc">
+            <title id="map-title">Mapa caminable de la primera célula</title>
+            <desc id="map-desc">Diez lugares: casa, agua, huerta, escuela, salud, refugio, materia prima, suelo, memoria y núcleo.</desc>
+            <defs>
+              <radialGradient id="land" cx="50%" cy="45%" r="70%">
+                <stop offset="0%" stop-color="#416c50" />
+                <stop offset="100%" stop-color="#16372b" />
+              </radialGradient>
+            </defs>
+            <ellipse class="land" cx="300" cy="220" rx="275" ry="190" />
+            <ellipse class="ring" cx="300" cy="220" rx="238" ry="156" />
+            <ellipse class="ring" cx="300" cy="220" rx="166" ry="108" />
+            <path class="river" d="M470 44 C420 120 520 190 445 270 C400 320 455 372 395 420" />
+            <path class="route" d="M130 290 Q215 355 300 342 Q390 338 470 270 Q438 174 390 104 Q294 70 210 112 Q184 196 130 290" />
+            <path id="walked-route" class="route walked" d="M130 290 Q215 355 300 342 Q390 338 470 270 Q438 174 390 104 Q294 70 210 112 Q184 196 130 290" />
+            <g class="map-stop" data-stop="suelo" tabindex="0" role="button" aria-label="Ir al suelo">
+              <circle cx="300" cy="48" r="22" />
+              <text x="300" y="52">suelo</text>
+            </g>
+            <g class="map-stop" data-stop="casa" tabindex="0" role="button" aria-label="Ir a casa">
+              <circle cx="130" cy="290" r="25" />
+              <text x="130" y="294">casa</text>
+            </g>
+            <g class="map-stop" data-stop="agua" tabindex="0" role="button" aria-label="Ir a agua">
+              <circle cx="210" cy="112" r="25" />
+              <text x="210" y="116">agua</text>
+            </g>
+            <g class="map-stop" data-stop="huerta" tabindex="0" role="button" aria-label="Ir a huerta">
+              <circle cx="390" cy="104" r="25" />
+              <text x="390" y="108">huerta</text>
+            </g>
+            <g class="map-stop" data-stop="escuela" tabindex="0" role="button" aria-label="Ir a escuela">
+              <circle cx="470" cy="270" r="25" />
+              <text x="470" y="274">escuela</text>
+            </g>
+            <g class="map-stop" data-stop="salud" tabindex="0" role="button" aria-label="Ir a salud">
+              <circle cx="300" cy="342" r="25" />
+              <text x="300" y="346">salud</text>
+            </g>
+            <g class="map-stop" data-stop="materia" tabindex="0" role="button" aria-label="Ir a materia prima">
+              <circle cx="88" cy="188" r="25" />
+              <text x="88" y="192">materia</text>
+            </g>
+            <g class="map-stop" data-stop="refugio" tabindex="0" role="button" aria-label="Ir al refugio">
+              <circle cx="530" cy="168" r="22" />
+              <text x="530" y="172">refugio</text>
+            </g>
+            <g class="map-stop" data-stop="memoria" tabindex="0" role="button" aria-label="Ir a la memoria">
+              <circle cx="185" cy="318" r="22" />
+              <text x="185" y="322">memoria</text>
+            </g>
+            <g class="map-stop nucleus" data-stop="nucleo" tabindex="0" role="button" aria-label="Ir al núcleo">
+              <circle cx="300" cy="220" r="34" />
+              <text x="300" y="224">núcleo</text>
+            </g>
+          </svg>
+          <ul class="live-metrics" aria-label="Pulso de la célula">
+            <li><span>Agua hoy</span><strong id="metric-water">—</strong></li>
+            <li><span>Batería</span><strong id="metric-energy">—</strong></li>
+            <li><span>Todo a pie</span><strong>≤ 8 min</strong></li>
+          </ul>
+        </div>
+
+        <article class="story" aria-live="polite">
+          <figure class="scene-frame">
+            <img id="stop-image" alt="" />
+          </figure>
+          <p class="time" id="stop-time"></p>
+          <h2 id="stop-title"></h2>
+          <p class="scene" id="stop-scene"></p>
+          <div class="promise">
+            <span>Lo que cambia</span>
+            <p id="stop-promise"></p>
+          </div>
+          <details>
+            <summary>La tecnología que no estorba</summary>
+            <p id="stop-tech"></p>
+          </details>
+          <nav class="story-nav" aria-label="Navegar el recorrido">
+            <button type="button" id="previous">Anterior</button>
+            <span id="step-count"></span>
+            <button type="button" id="next">Seguir caminando</button>
+          </nav>
+        </article>
+      </section>
+
+      <section class="closing" id="closing" hidden>
+        <p class="eyebrow">El recorrido termina. El diseño empieza.</p>
+        <h2>Ustedes también dibujan.</h2>
+        <p>
+          Nosotras plantamos la semilla. Quienes vivieron el terremoto
+          proponen, firman y construyen en código. Un respaldo no es un decreto.
+        </p>
+        <ol class="participate">
+          <li>
+            <strong>Camina.</strong>
+            Recorre la semilla. No es tu casa hoy.
+          </li>
+          <li>
+            <strong>Propón.</strong>
+            Cada persona puede diseñar una célula de su suelo.
+            <a href="plaza.html">Abrir la plaza.</a>
+          </li>
+          <li>
+            <strong>Firma.</strong>
+            Un nombre, un territorio, a la vista. Lo más respaldado se dibuja primero.
+          </li>
+          <li>
+            <strong>El suelo.</strong>
+            Baldío no es lote vacío. Pereira, hipótesis. El siguiente es un
+            radicado, no un satélite. El predio es —.
+            <a href="SITIO.md">Abrir el suelo.</a>
+            <a href="plantar.html">Ver el corte tipo.</a>
+          </li>
+          <li>
+            <strong>El paper.</strong>
+            v0.2 es el corte: tres kits. v0.1, el argumento.
+            <a href="paper.html">Leer el white paper.</a>
+          </li>
+        </ol>
+        <div class="closing-actions">
+          <button type="button" id="copy-question">Copiar la pregunta</button>
+          <a href="plaza.html">La plaza</a>
+          <a href="paper.html">White paper</a>
+        </div>
+        <p class="copied" id="copied" role="status"></p>
+      </section>
+    </main>
+
+    <script src="recorrido.js"></script>
+  </body>
+</html>

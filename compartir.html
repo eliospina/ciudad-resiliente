@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reenvía — Ciudad Resiliente</title>
+    <meta
+      name="description"
+      content="Hacemos la ciudad. Óvalo de células. Arquitectas y urbanismo: se dibuja la primera célula."
+    />
+    <meta property="og:title" content="Hacemos la ciudad." />
+    <meta
+      property="og:description"
+      content="Óvalo de células. Risaralda · Valle · Chocó. Arquitectas, urbanismo: dibuja la primera célula."
+    />
+    <meta
+      property="og:image"
+      content="https://ciudad-resiliente.vercel.app/public/cartel-ciudad.png"
+    />
+    <meta
+      property="og:url"
+      content="https://ciudad-resiliente.vercel.app/compartir.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://ciudad-resiliente.vercel.app/public/cartel-ciudad.png"
+    />
+    <link rel="canonical" href="https://ciudad-resiliente.vercel.app/compartir.html" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="obs-hero">
+      <p class="kicker">Convocar · arquitectura</p>
+      <h1>Reenvía esto.</h1>
+      <p class="lead">
+        La ciudad, no el observatorio. Una imagen, una frase. Sin escombros.
+      </p>
+    </header>
+
+    <main>
+      <section>
+        <p class="plain">
+          WhatsApp, Instagram, X. Baja el cartel. Pega el texto. El óvalo
+          convoca; el tablero de ayudas no. La puerta:
+          <a href="https://ciudad-resiliente.vercel.app/">ciudad-resiliente.vercel.app</a>.
+        </p>
+        <div class="share-grid">
+          <figure>
+            <img
+              src="public/cartel-ciudad.png"
+              alt="Cartel cuadrado: primera célula compacta en ladera, patio al centro."
+            />
+            <figcaption>
+              Cuadrado ·
+              <a href="public/cartel-ciudad.png" download>Bajar</a>
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="public/cartel-ciudad-story.png"
+              alt="Cartel vertical: la misma célula compacta, para historia."
+            />
+            <figcaption>
+              Historia ·
+              <a href="public/cartel-ciudad-story.png" download>Bajar</a>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section>
+        <h2>Texto para pegar</h2>
+        <blockquote id="share-copy">
+          Hacemos la ciudad.
+
+          Una esperanza: barrios a pie, con el agua y la comida cerca.
+          Código abierto: clona y propone.
+
+          https://github.com/eliospina/ciudad-resiliente
+          https://ciudad-resiliente.vercel.app/
+        </blockquote>
+        <button type="button" id="copy-btn">Copiar</button>
+      </section>
+
+      <section id="invitar">
+        <ul class="invite-doors">
+          <li>
+            <a href="index.html">La ciudad</a>
+            — el óvalo, para quien dibuja.
+          </li>
+          <li>
+            <a href="observatorio.html">Observatorio</a>
+            — otro oficio. No se reenvía con esto.
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <nav class="doors" aria-label="Dos oficios">
+        <a href="index.html">La ciudad</a>
+        <a href="plaza.html">Plaza</a>
+        <a href="observatorio.html">Observatorio</a>
+      </nav>
+      <p>Ciudad Resiliente · 2026</p>
+    </footer>
+    <script>
+      const btn = document.getElementById("copy-btn");
+      const text = document
+        .getElementById("share-copy")
+        .textContent.replace(/[ \t]+\n/g, "\n")
+        .replace(/\n[ \t]+/g, "\n")
+        .replace(/[ \t]{2,}/g, " ")
+        .trim();
+      btn.addEventListener("click", async () => {
+        await navigator.clipboard.writeText(text);
+        btn.textContent = "Copiado";
+      });
+    </script>
+  </body>
+</html>

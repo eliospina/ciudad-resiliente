@@ -1,25 +1,26 @@
 # Ciudad Resiliente
 
-Ciudad ovalada en células. Núcleo de vida. Risaralda, Valle, Chocó.
+Sitio: [ciudad-resiliente.vercel.app](https://ciudad-resiliente.vercel.app/)  
+Código: [github.com/eliospina/ciudad-resiliente](https://github.com/eliospina/ciudad-resiliente)
+
+Una esperanza habitable. Código abierto. Se clona, se propone, se firma a la vista.
 
 ```bash
+git clone https://github.com/eliospina/ciudad-resiliente.git
+cd ciudad-resiliente
 python3 -m http.server 4173
 ```
 
-Abre [http://localhost:4173](http://localhost:4173).
+Tres puertas. No se mezclan las cajas.
 
-El presupuesto de cristal se verifica cada 60 s (`data/pulso.json` y `data/flujos.json`). Un minuto sin fuente no inventa desembolso. Para publicar una ayuda verificada, añade un evento en `data/pulso.json`:
+| Link | Oficio |
+| --- | --- |
+| [La ciudad](index.html) | El óvalo y la primera célula |
+| [La plaza](plaza.html) | Proponer y respaldar en código |
+| [Observatorio](observatorio.html) | Ayuda anunciada a Colombia, con fuente |
 
-```json
-{
-  "id": "evt-2026-08-17-001",
-  "at": "2026-08-17T16:05:00-05:00",
-  "kind": "desembolso",
-  "origin": "Nombre del origen",
-  "amount": "Monto y unidad, o Información no disponible",
-  "territory": "Risaralda | Valle | Chocó | Nacional",
-  "source": { "name": "Medio y fecha", "url": "https://" }
-}
-```
+Si nadie entra, queda el ejercicio. La semilla está.
 
-`kind`: `anuncio`, `desembolso`, `credito` o `especie`. Crédito no es donación. Oferta no es giro. En especie no es caja. Si también cambia el libro, edita `data/flujos.json` y sube `ledgerUpdated`.
+## Licencia
+
+MIT. Úsala, corrígela, propón otra célula.

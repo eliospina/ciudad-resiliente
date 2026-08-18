@@ -1,0 +1,38 @@
+{
+  "note": "El respaldo se firma aquí, a la vista. No es urna municipal ni plan oficial. Nosotras iniciamos; la ciudadanía propone y respalda.",
+  "proposals": [
+    {
+      "id": "semilla-ovalo",
+      "title": "Óvalo de células",
+      "author": "Ciudad Resiliente — iniciativa",
+      "soil": "Risaralda · Valle · Chocó",
+      "summary": "Una célula entra con título, amenaza y consentimiento. Vive a pie: agua, luz, comida, escuela y casa de salud. Núcleo después de que la primera vive.",
+      "stays": "Quien ya habita. Sin folio y sin su sí, no entra sitio.",
+      "status": "semilla",
+      "href": "index.html",
+      "backs": []
+    },
+    {
+      "id": "bunker-civico",
+      "title": "Búnker cotidiano",
+      "author": "Ciudad Resiliente — iniciativa",
+      "soil": "Risaralda · Valle · Chocó",
+      "summary": "No es un búnker aparte ni sótano. Escuela y casa de salud, de día oficio, de noche refugio. El núcleo no es búnker. No se costea un cuarto extra.",
+      "stays": "Quien ya habita. El refugio no desplaza; cubre la primera noche.",
+      "status": "semilla",
+      "href": "recorrido.html#refugio",
+      "backs": []
+    },
+    {
+      "id": "forma-anterior",
+      "title": "La forma que ya había",
+      "author": "Ciudad Resiliente — iniciativa",
+      "soil": "Risaralda · Valle · Chocó",
+      "summary": "Terraza, palafito, maloca, círculo. Antes de la conquista ya se habitaba este suelo. La técnica de ahora sirve a esa memoria. Nosotras no tenemos la última voz: quien aún habita corrige.",
+      "stays": "Pueblos y comunidades de este suelo. Sin su sí, no es inspiración: es disfraz.",
+      "status": "semilla",
+      "href": "recorrido.html#memoria",
+      "backs": []
+    }
+  ]
+}

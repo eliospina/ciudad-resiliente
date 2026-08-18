@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Plaza — Ciudad Resiliente</title>
+    <meta
+      name="description"
+      content="Nosotras plantamos la semilla. Ustedes proponen una célula y la respaldan a la vista. Código abierto."
+    />
+    <meta property="og:title" content="La plaza. Ustedes dibujan." />
+    <meta
+      property="og:description"
+      content="Nosotras iniciamos. No tenemos la última voz. Se propone en código. Un respaldo no es un decreto."
+    />
+    <meta
+      property="og:image"
+      content="https://ciudad-resiliente.vercel.app/public/cartel-ciudad.png"
+    />
+    <meta property="og:url" content="https://ciudad-resiliente.vercel.app/plaza.html" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://ciudad-resiliente.vercel.app/public/cartel-ciudad.png"
+    />
+    <link rel="canonical" href="https://ciudad-resiliente.vercel.app/plaza.html" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="obs-hero">
+      <p class="kicker">Ciudadanía · código abierto</p>
+      <h1>La plaza.</h1>
+      <p class="lead">
+        Nosotras iniciamos. No tenemos la última voz. Cada persona puede diseñar una célula. La plaza la respalda a la vista.
+      </p>
+    </header>
+
+    <main>
+      <section>
+        <p class="wall">
+          Nosotras no tenemos la última voz. Instauramos un espacio para que
+          la ciudadanía se empodere de la ciudad: se propone en código, se
+          firma con nombre y territorio. Un respaldo no es un decreto. Sin
+          folio y sin el sí de quien habita, no se planta.
+        </p>
+        <p class="plain">
+          La semilla es el óvalo. Hay otras dos, también a debate: el búnker
+          cotidiano y la forma de quienes habitaban antes de la conquista.
+          Quien camina puede corregirlas, copiarlas o proponer otra.
+        </p>
+        <p class="plain">
+          Una célula entra solo con título, amenaza y consentimiento.
+          Municipio de trabajo: Pereira, hipótesis. El predio es —.
+          El siguiente del suelo es un radicado, no un satélite.
+        </p>
+        <ol class="steps">
+          <li>
+            <a href="recorrido.html">Camina</a>
+            la semilla. No es tu casa hoy.
+          </li>
+          <li>Propón la tuya: suelo, qué cambia, quién se queda.</li>
+          <li>
+            El archivo vive en
+            <a href="propuestas/PLANTILLA.md">propuestas/</a>.
+            Eso es construir en código.
+          </li>
+          <li>La plaza respalda: un nombre, un territorio, a la vista.</li>
+          <li>
+            Lo respaldado se dibuja. El sitio sigue
+            <a href="SITIO.md">SITIO.md</a>. El costo,
+            <a href="COSTO.md">COSTO.md</a>.
+            El corte,
+            <a href="paper.html">paper.html</a>.
+            Cómo se vería,
+            <a href="plantar.html">plantar.html</a>.
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Diseños a la vista</h2>
+        <p class="chip-hint">Hoy la semilla. Las demás las trae la ciudadanía.</p>
+        <div id="plaza-list" class="plaza-list"></div>
+      </section>
+
+      <section>
+        <h2>Proponer una célula</h2>
+        <p class="plain">
+          Rellena. Baja el archivo. Ábrelo como pull request en
+          <a href="https://github.com/eliospina/ciudad-resiliente">el repositorio</a>.
+          Proponer no planta: sin folio, sin amenaza y sin el sí de quien habita,
+          el predio sigue en —.
+        </p>
+        <form class="civic-form" id="form-proponer">
+          <label>
+            Quién propone
+            <input name="author" required placeholder="Nombre, JAC, consejo o taller" />
+          </label>
+          <label>
+            Suelo
+            <select name="soil" required>
+              <option value="Risaralda">Risaralda · ladera 1.200–1.800 m</option>
+              <option value="Valle">Valle · 900–1.100 m</option>
+              <option value="Chocó">Chocó · 0–100 m</option>
+            </select>
+          </label>
+          <label>
+            Título
+            <input name="title" required placeholder="Nombre de esta célula" />
+          </label>
+          <label>
+            Qué cambia
+            <textarea name="summary" required rows="4" placeholder="Casa, agua, huerta, escuela, salud, paso. El suelo manda."></textarea>
+          </label>
+          <label>
+            Quién se queda
+            <input name="stays" required placeholder="Quien ya habita. Sin su sí, no entra sitio." />
+          </label>
+          <button type="submit">Bajar el archivo</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Respaldar</h2>
+        <p class="plain">
+          Una firma por persona y por diseño. Nombre y territorio, a la vista.
+          No es anónimo. No es un like. Se pega en el archivo del diseño.
+        </p>
+        <form class="civic-form" id="form-respaldar">
+          <label>
+            Diseño
+            <select name="proposal" id="back-select" required></select>
+          </label>
+          <label>
+            Tu nombre
+            <input name="name" required placeholder="Nombre o colectivo" />
+          </label>
+          <label>
+            Territorio
+            <input name="territory" required placeholder="Municipio, vereda, consejo" />
+          </label>
+          <button type="submit">Copiar el respaldo</button>
+        </form>
+        <p class="copied" id="plaza-status" role="status"></p>
+      </section>
+    </main>
+
+    <footer>
+      <nav class="doors" aria-label="Dos oficios">
+        <a href="index.html">La ciudad</a>
+        <a href="plaza.html" aria-current="page">Plaza</a>
+        <a href="observatorio.html">Observatorio</a>
+      </nav>
+      <p>Ciudad Resiliente · la semilla es nuestra; la ciudad, de quien habita</p>
+    </footer>
+    <script src="plaza.js"></script>
+  </body>
+</html>

@@ -38,7 +38,7 @@ const lessons = [
     nodes: ["alimento", "agua", "naturaleza", "nucleo"],
     simple: {
       question: "¿De dónde sale lo que se come?",
-      answer: "De la huerta a paso. Tierra a la vista.",
+      answer: "De la huerta a paso. Tierra a la vista. Se come lo que nace a minutos de la casa.",
       connects: "Agua · verde",
     },
   },
@@ -75,13 +75,13 @@ const lessons = [
     chip: "Casa",
     question: "¿Cómo se habita el techo en ladera?",
     answer:
-      "Como prolongación ligera del terreno, no como otro piso. Terrazas que siguen las curvas de nivel: patio, pérgola, huerto, mirador. Estructura liviana y simétrica; sin masa pesada arriba. Núcleos rígidos alineados; sin columnas discontinuas. Juntas sísmicas entre cuerpos. Anclaje y drenaje con el talud. El cálculo junta edificio, cimentación y ladera.",
+      "Como prolongación ligera del terreno, no como otro piso. Terrazas que siguen las curvas de nivel: patio, pérgola, huerto, mirador. Estructura liviana y simétrica; sin masa pesada arriba. No teja de barro: en el sismo esa masa cae. Núcleos rígidos alineados; sin columnas discontinuas. Juntas sísmicas entre cuerpos. Anclaje y drenaje con el talud. El cálculo junta edificio, cimentación y ladera.",
     connects: "Luz · verde · casa",
     nodes: ["vivienda", "energia", "naturaleza", "nucleo"],
     simple: {
       question: "¿Cómo se habita el techo en ladera?",
       answer:
-        "El techo sigue la ladera, no se apila. Terrazas en la curva de nivel: huerto, patio, sol. Liviano arriba, juntas entre cuerpos, drenaje con el talud. Edificio y ladera se calculan juntos.",
+        "El techo sigue la ladera, no se apila. Terrazas en la curva de nivel: huerto, patio, sol. Liviano arriba, sin teja de barro. Juntas entre cuerpos, drenaje con el talud. Edificio y ladera se calculan juntos.",
       connects: "Verde · luz",
     },
   },
@@ -100,11 +100,39 @@ const lessons = [
     },
   },
   {
+    id: "refugio",
+    chip: "Búnker",
+    question: "¿Qué es el búnker?",
+    answer:
+      "No es un búnker aparte ni sótano de guerra. En ladera y crecida, enterrar mata. La escuela y la casa de salud, de día oficio, de noche refugio: agua, luz, radio, botiquín. El núcleo no es búnker. No sustituye al hospital de red. La montaña no se vence; se aguarda juntas.",
+    connects: "Salud · escuela · núcleo",
+    nodes: ["salud", "escuela", "nucleo", "vivienda"],
+    simple: {
+      question: "¿Dónde se aguarda si tiembla?",
+      answer: "En la escuela y en la casa de salud. No es un cuarto aparte. No es un sótano.",
+      connects: "Salud · escuela",
+    },
+  },
+  {
+    id: "memoria",
+    chip: "Memoria",
+    question: "¿De dónde sale la forma?",
+    answer:
+      "Antes de la conquista ya se habitaba este suelo: terraza en la ladera, palafito al río, maloca y círculo para reunirse. No copiamos un disfraz. Aprendemos esa forma. La técnica de ahora —sol, juntas sísmicas, microred— le sirve. Nosotras no tenemos la última voz: quien aún habita corrige en la plaza.",
+    connects: "Núcleo · casa · verde",
+    nodes: ["nucleo", "vivienda", "naturaleza"],
+    simple: {
+      question: "¿De dónde sale la forma?",
+      answer: "De quienes ya habitaban. Terraza, palafito, círculo. El sol y el código sirven; no mandan.",
+      connects: "Núcleo · verde",
+    },
+  },
+  {
     id: "ciclo",
     chip: "Ciclo",
-    question: "¿Qué se hace con los residuos?",
+    question: "¿Qué es lo que sobra?",
     answer:
-      "Separación en origen. Dos metabolismos: biológico a suelo, técnico a pieza. RCD a agregado reciclado. Residual en kg/persona, publicado.",
+      "No es basura. Es materia prima. Orgánico vuelve a suelo. Técnico vuelve a pieza. Escombro (RCD) vuelve solo si se ensaya. Lo que aún no cierra se publica.",
     connects: "Verde · agua · alimentos · casa",
     nodes: ["naturaleza", "agua", "alimento", "vivienda"],
   },
@@ -124,7 +152,7 @@ const lessons = [
     group: "waste",
     question: "¿Qué se hace con la fracción húmeda?",
     answer:
-      "Compost termófilo (55–65 °C) o biodigestor: biogás para cocina, digestato al verde. Lixiviado tratado, nunca al río. Aceite, RAEE y metal no entran: contaminan el ciclo.",
+      "Es materia prima del suelo. Compost termófilo (55–65 °C) o biodigestor: biogás para cocina, digestato al verde. Lixiviado tratado, nunca al río. Aceite, RAEE y metal no entran: contaminan el ciclo.",
     connects: "Alimentos · verde · agua",
     nodes: ["alimento", "naturaleza", "agua"],
   },
@@ -134,7 +162,7 @@ const lessons = [
     group: "waste",
     question: "¿Cómo se clasifica la fracción técnica?",
     answer:
-      "PET, HDPE, PP, vidrio por color, férrico y no férrico, RAEE en línea propia. Tasa de captura alta, contaminación baja. El taller clasifica; lo que no cierra aquí sube a planta, ya limpio.",
+      "Es materia prima de pieza. PET, HDPE, PP, vidrio por color, férrico y no férrico, RAEE en línea propia. Tasa de captura alta, contaminación baja. El taller clasifica; lo que no cierra aquí sube a planta, ya limpio.",
     connects: "Taller · casa · escuela",
     nodes: ["vivienda", "escuela", "nucleo"],
   },
@@ -142,9 +170,9 @@ const lessons = [
     id: "escombro",
     chip: "Escombro",
     group: "waste",
-    question: "¿Qué se hace con el escombro?",
+    question: "¿El escombro es basura?",
     answer:
-      "RCD: concreto triturado a agregado reciclado, acero a fundición o taller, madera sana a cubierta, tierra al corredor. Triturar en sitio para no acarrear el volumen.",
+      "No: es materia prima del sismo, si se ensaya. Concreto triturado a agregado no estructural primero; estructural solo con especificación. Acero a taller o fundición. Madera sana a cubierta, tras inspección. Tierra al corredor, sin cargar el talud. Triturar en sitio para no acarrear el volumen.",
     connects: "Casa · verde · núcleo",
     nodes: ["vivienda", "naturaleza", "nucleo"],
   },
@@ -195,7 +223,7 @@ const lessons = [
     chip: "Inteligencia",
     question: "¿Qué hace la inteligencia?",
     answer:
-      "Cruza balances: agua, kilovatios, humedad del compost, kg residuales, % de contaminación. Avisa. Decide el núcleo.",
+      "Cruza balances: agua, kilovatios, humedad del compost, kg residuales, % de contaminación. Avisa. La plaza decide.",
     connects: "Óvalo · núcleo",
     nodes: ["nucleo", "agua", "energia", "alimento", "escuela"],
   },
@@ -209,7 +237,7 @@ const lessons = [
     nodes: ["nucleo", "agua", "energia", "alimento", "vivienda", "escuela", "naturaleza", "salud"],
     simple: {
       question: "¿Qué hay en el centro?",
-      answer: "Gente. Asamblea, canto, árboles. Todas las tradiciones.",
+      answer: "Gente. Asamblea, canto, árboles. El círculo ya estaba. El núcleo es la plaza compartida.",
       connects: "Todo el óvalo",
     },
   },
@@ -269,8 +297,8 @@ const lessons = [
     group: "vida",
     question: "¿Quién ve el dinero?",
     answer:
-      "Quien habita. Desde la fundación: cada peso con origen, ruta, territorio, célula y fuente. Lo anunciado no es lo ejecutado. Crédito no es donación. El tablero del núcleo y el rastreador son el mismo cristal.",
-    connects: "Rastreador · núcleo",
+      "Quien habita. Si la célula maneja un peso, se publica: origen, ruta, territorio, fuente. Lo anunciado no es lo ejecutado. Crédito no es donación. El observatorio rastrea la ayuda a Colombia; no es la caja de esta ciudad.",
+    connects: "Observatorio · núcleo",
     nodes: ["nucleo", "vivienda", "escuela"],
   },
   {
@@ -289,8 +317,8 @@ const lessons = [
     group: "valores",
     question: "¿Cómo se publica el presupuesto?",
     answer:
-      "A nadie. Origen, ruta, territorio, célula, fuente. Lo anunciado no es lo ejecutado.",
-    connects: "Núcleo · rastreador",
+      "A la vista. Origen, ruta, territorio, célula, fuente. Lo anunciado no es lo ejecutado.",
+    connects: "Núcleo · observatorio",
     nodes: ["nucleo", "escuela"],
   },
   {
@@ -386,7 +414,7 @@ const lessons = [
     group: "habitar",
     question: "¿En qué tierra se planta?",
     answer:
-      "En la suya. Pereira en ladera, 1200–1800 m: sismo, alud, café de sombra. Valle, 900–1100 m: calor, río, crecida. Chocó en cota baja: lluvia, dosel, río-camino. El kit (sitio, agua, luz, huerta) cambia con eso.",
+      "En la suya. Pereira en ladera, 1.200–1.800 m: sismo, alud, café de sombra. Valle, 900–1.100 m: calor, río, crecida. Chocó, 0–100 m: lluvia, dosel, río-camino. El kit (sitio, agua, luz, huerta) cambia con eso.",
     connects: "Toca un suelo",
     nodes: ["naturaleza", "agua", "alimento", "vivienda"],
     simple: {
@@ -413,7 +441,7 @@ const lessons = [
   },
   {
     id: "educacion",
-    chip: "Escuela",
+    chip: "Educación",
     group: "habitar",
     question: "¿Qué se enseña?",
     answer:
@@ -448,7 +476,7 @@ const lessons = [
     group: "valores",
     question: "¿Cómo se planta en cada suelo?",
     answer:
-      "Misma célula. Territorialidad: la cota manda el kit. Lo autóctono y la agricultura cambian; las tomas de red siguen. Toca un suelo.",
+      "Misma célula. Territorio: la cota manda el kit. De aquí y la huerta cambian; las tomas de red siguen. Toca un suelo.",
     connects: "Toca un suelo · verde · agua · luz",
     nodes: ["naturaleza", "alimento", "agua"],
   },
@@ -458,7 +486,7 @@ const lessons = [
     group: "hacer",
     question: "¿Qué se planta primero?",
     answer:
-      "Una célula de este suelo: sol, huerta, escuela, canto. Techo y casa de salud para habitarla.",
+      "Una célula de este suelo: sol, huerta, escuela, canto. Techo y casa de salud para habitarla. Entra con título, amenaza y consentimiento.",
     connects: "Verde · luz · huerta · escuela · núcleo",
     nodes: ["naturaleza", "energia", "alimento", "escuela", "nucleo", "salud", "vivienda"],
   },
@@ -466,11 +494,11 @@ const lessons = [
     id: "fase-red",
     chip: "Unir",
     group: "hacer",
-    question: "¿Y cuando hay más de una célula?",
+    question: "¿Y cuándo hay más de una célula?",
     answer:
       "Paso iluminado. Escuela. Taller. Corredor verde. Hospital de red: lo que una no cubre, lo cubre la vecina. Si una falla, las otras prestan luz, agua, cama.",
     connects: "Escuela · taller · verde · paso · salud",
-    nodes: ["escuela", "taller", "naturaleza", "salud", "energia"],
+    nodes: ["escuela", "vivienda", "naturaleza", "salud", "energia"],
   },
   {
     id: "fase-nucleo",
@@ -478,7 +506,7 @@ const lessons = [
     group: "hacer",
     question: "¿Cuándo abre el centro?",
     answer:
-      "Cuando las células ya se sostienen. Asamblea, fiesta, todas las tradiciones. Presupuesto de cristal. Centro de desarrollo: gemelo de flujos, taller digital.",
+      "Cuando las células ya se sostienen. Asamblea, fiesta, todas las tradiciones. Presupuesto de cristal. Centro de desarrollo: gemelo de flujos, taller digital. El núcleo no es búnker ni nave. Se dibuja después de que la primera vive.",
     connects: "Todas las células llegan aquí.",
     nodes: ["nucleo", "vivienda", "escuela", "salud", "energia", "agua"],
   },
@@ -488,7 +516,7 @@ const lessons = [
     group: "hacer",
     question: "¿Qué cambia entre suelos?",
     answer:
-      "La cota, el sitio y el kit. Territorialidad: ladera, valle o selva. Lo autóctono y la agricultura cambian. La red sigue prestando luz, agua y cama. Toca un suelo.",
+      "La cota, el sitio y el kit. Territorio: ladera, valle o selva. De aquí y la huerta cambian. La red sigue prestando luz, agua y cama. Toca un suelo.",
     connects: "Toca Risaralda, Valle o Chocó",
     nodes: ["naturaleza", "alimento", "agua"],
   },
@@ -497,21 +525,21 @@ const lessons = [
 const soils = {
   risaralda: {
     question: "¿Dónde se planta en ladera?",
-    kit: "1200–1800 m, hombro de ladera: no cicatriz de alud ni fondo de cañada. Techo como terraza del terreno: curvas de nivel, liviano arriba, núcleos alineados, juntas sísmicas, anclaje y drenaje con el talud. Agua de nacimiento y cosecha. Energía solar en cubierta. Sombrío de café sujeta el suelo.",
+    kit: "1.200–1.800 m, hombro de ladera: no cicatriz de alud ni fondo de cañada. Techo como terraza del terreno: curvas de nivel, liviano arriba, núcleos alineados, juntas sísmicas. No teja de barro. Edificio, cimentación y ladera se calculan juntos. Agua de nacimiento y cosecha; drenaje con el talud. Energía solar en cubierta. Folio, POT, amenaza y consentimiento antes del anteproyecto.",
     food: "Café de sombra, plátano, aguacate, cítricos, lulo, mora, granadilla, guanábana, guayaba, papaya, piña, pitahaya, maracuyá, tomate de árbol, fresa. Hortalizas de clima medio (tomate, cebolla de rama, cilantro, ahuyama). Fríjol, maíz, yuca. Gallina de patio. EVA Pereira 2018: 38 cultivos. Frontera agrícola Risaralda 2023: 148.196 ha (UPRA). El café no se tala para un bloque.",
     connects: "Sitio · agua · luz · huerta",
     nodes: ["vivienda", "agua", "energia", "naturaleza", "alimento"],
   },
   valle: {
     question: "¿Dónde se planta junto al río?",
-    kit: "Cota 900–1100 m. Sitio: terraza sobre el cauce, retiro de orilla, no playa de río. Sombra primero: el calor mata. Agua de cosecha y río tratado; humedal; el río no es desagüe. Luz en techo. Piso que convive con crecida.",
+    kit: "Cota 900–1.100 m. Terraza alta respecto al río; retiro por estudio hidráulico, no por una distancia genérica. Sombra primero. Agua de cosecha; el río no es desagüe. Cubierta ligera y ventilada; piso habitable sobre la crecida de diseño. Hidrología, estructura y flotación en el mismo cálculo. Folio, amenaza y consentimiento antes del anteproyecto.",
     food: "EVA Valle 2018: 70 cultivos (29 frutales, 14 hortalizas). Mango, papaya, guayaba, maracuyá, cítricos, piña, uva, tomate, pimentón, cilantro, ahuyama, maíz, fríjol, yuca, plátano. Frontera agrícola 2023: 783.581 ha; 48 % cultivada. En 2023 la caña fue el 58,7 % del área sembrada: diversificar dentro de la frontera, no caña única. Cadena corta: menos flete en el precio.",
     connects: "Sitio · sombra · agua · huerta",
     nodes: ["vivienda", "agua", "naturaleza", "alimento", "energia"],
   },
   choco: {
     question: "¿Dónde se planta en selva y río?",
-    kit: "Cota baja, lluvia casi permanente. Sitio: alto relativo al río, borde de bosque. Cisterna tapada: si cría mosquito, enferma. Más batería: más nubes. Paso por pie y bote cuando el puente no está. Se poda y se siembra bajo dosel. Palma y potrero no son el cultivo.",
+    kit: "Cota 0–100 m. Alto relativo al río, en asentamiento existente o donde el Consejo Comunitario decide. El río es camino. Cisterna tapada. Más batería: más nubes. Piezas que viajan por río. Se poda y se siembra bajo dosel. Sin el consejo, no hay sitio.",
     food: "EVA Chocó 2018: 41 cultivos. Cacao, chontaduro, borojó, coco, plátano, banano, yuca, ñame, malanga, arroz, maíz, maracuyá, piña, guanábana. Pesca de río: no entra en la EVA. Frontera agrícola 2023: 452.218 ha; 21 % cultivada. El monte crece solo; el margen es huerta y agroforestería, no palma. Quibdó reportó 12 cultivos en EVA: la canasta real del dosel es más ancha.",
     connects: "Sitio · agua · batería · río",
     nodes: ["vivienda", "naturaleza", "agua", "energia", "alimento"],
@@ -542,6 +570,7 @@ const habitarPanel = document.getElementById("habitar-panel");
 const territorioPanel = document.getElementById("territorio-panel");
 const layerTitle = document.getElementById("layer-title");
 const layerLead = document.getElementById("layer-lead");
+const layerPlain = document.getElementById("layer-plain");
 
 const habitarTour = [
   "sostenibilidad",
@@ -556,6 +585,7 @@ const hacerTour = ["fase-celula", "fase-red", "fase-nucleo", "fase-suelo"];
 const soilTour = ["risaralda", "valle", "choco"];
 const cityTour = [
   "salud",
+  "refugio",
   "alimento",
   "escuela",
   "vivienda",
@@ -567,10 +597,11 @@ const cityTour = [
   "red",
   "inteligencia",
   "nucleo",
+  "memoria",
   "ciclo",
 ];
 const wasteTour = ["ciclo", "diseno", "organico", "tecnico", "escombro", "residual"];
-const vidaTour = ["vida", "salud", "cultura", "economia", "seguridad", "centro", "transparencia"];
+const vidaTour = ["vida", "salud", "refugio", "memoria", "cultura", "economia", "seguridad", "centro", "transparencia"];
 const valoresTour = [
   "dignidad",
   "verdad",
@@ -673,7 +704,7 @@ function showLesson(id, options = {}) {
     btn.setAttribute("aria-pressed", String(btn.dataset.id === id));
   });
   if (options.scroll && (id === "transparencia" || id === "verdad")) {
-    document.getElementById("rastreador")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    document.getElementById("observatorio")?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 }
 
@@ -712,6 +743,10 @@ function setLayer(next, options = {}) {
   if (habitar) {
     layerTitle.textContent = "Habitar";
     layerLead.textContent = "Se camina entre árboles. El suelo manda.";
+    if (layerPlain) {
+      layerPlain.textContent =
+        "Cada célula es un barrio que produce lo que consume: agua, luz, comida y escuela, todo a pie.";
+    }
     oval.removeAttribute("data-soil");
     currentSoil = null;
     document.querySelectorAll("#soil-cards [data-soil]").forEach((item) => {
@@ -720,6 +755,10 @@ function setLayer(next, options = {}) {
   } else {
     layerTitle.textContent = "Territorio";
     layerLead.textContent = "Tres cotas. Un óvalo. Toca ladera, valle o selva.";
+    if (layerPlain) {
+      layerPlain.textContent =
+        "El kit es sitio, agua, luz y huerta. Cambia con la cota: 1.200–1.800 m, 900–1.100 m o 0–100 m.";
+    }
   }
   if (!options.silent) {
     stopTour();
@@ -751,7 +790,7 @@ function stopTour() {
   tourBtn.textContent = "Recorrer";
   tourBtn.setAttribute("aria-pressed", "false");
   if (wasteBtn) {
-    wasteBtn.textContent = "Residuos bajos";
+    wasteBtn.textContent = "Materia prima";
     wasteBtn.setAttribute("aria-pressed", "false");
   }
   if (vidaBtn) {
@@ -836,39 +875,53 @@ document.querySelectorAll("#ovalo .cell").forEach((cell) => {
   });
 });
 
-layerHabitarBtn.addEventListener("click", () => {
-  if (layer !== "habitar") setLayer("habitar");
-});
+if (layerHabitarBtn) {
+  layerHabitarBtn.addEventListener("click", () => {
+    if (layer !== "habitar") setLayer("habitar");
+  });
+}
 
-layerTerritorioBtn.addEventListener("click", () => {
-  if (layer !== "territorio") setLayer("territorio");
-});
+if (layerTerritorioBtn) {
+  layerTerritorioBtn.addEventListener("click", () => {
+    if (layer !== "territorio") setLayer("territorio");
+  });
+}
 
-tourBtn.addEventListener("click", () => {
-  if (tourKind === "habitar" || tourKind === "soils") stopTour();
-  else if (layer === "habitar") startTour(habitarTour, "habitar");
-  else startTour(soilTour, "soils");
-});
+if (tourBtn) {
+  tourBtn.addEventListener("click", () => {
+    if (tourKind === "habitar" || tourKind === "soils") stopTour();
+    else if (layer === "habitar") startTour(habitarTour, "habitar");
+    else startTour(soilTour, "soils");
+  });
+}
 
-wasteBtn.addEventListener("click", () => {
-  if (tourKind === "waste") stopTour();
-  else startTour(wasteTour, "waste");
-});
+if (wasteBtn) {
+  wasteBtn.addEventListener("click", () => {
+    if (tourKind === "waste") stopTour();
+    else startTour(wasteTour, "waste");
+  });
+}
 
-vidaBtn.addEventListener("click", () => {
-  if (tourKind === "vida") stopTour();
-  else startTour(vidaTour, "vida");
-});
+if (vidaBtn) {
+  vidaBtn.addEventListener("click", () => {
+    if (tourKind === "vida") stopTour();
+    else startTour(vidaTour, "vida");
+  });
+}
 
-valoresBtn.addEventListener("click", () => {
-  if (tourKind === "valores") stopTour();
-  else startTour(valoresTour, "valores");
-});
+if (valoresBtn) {
+  valoresBtn.addEventListener("click", () => {
+    if (tourKind === "valores") stopTour();
+    else startTour(valoresTour, "valores");
+  });
+}
 
-hacerBtn.addEventListener("click", () => {
-  if (tourKind === "hacer") stopTour();
-  else startTour(hacerTour, "hacer");
-});
+if (hacerBtn) {
+  hacerBtn.addEventListener("click", () => {
+    if (tourKind === "hacer") stopTour();
+    else startTour(hacerTour, "hacer");
+  });
+}
 
 document.querySelectorAll("#soil-cards [data-soil]").forEach((card) => {
   bindActivate(card, () => {
@@ -877,23 +930,35 @@ document.querySelectorAll("#soil-cards [data-soil]").forEach((card) => {
   });
 });
 
+const GAP = "Información no disponible";
+
 function isGap(value) {
-  return !value || value.startsWith("Información no disponible") || value.startsWith("Sin fuente");
+  return !value || value === GAP || value.startsWith(GAP) || value.startsWith("Sin fuente");
+}
+
+function displayValue(value) {
+  if (!value || value === GAP || value.startsWith("Sin fuente")) return "—";
+  if (value.startsWith(GAP)) {
+    const rest = value.slice(GAP.length).trim();
+    return rest ? `— ${rest}` : "—";
+  }
+  return value.includes(GAP) ? value.replaceAll(GAP, "—") : value;
 }
 
 function cell(value, href) {
   const td = document.createElement("td");
+  const shown = displayValue(value);
   if (href) {
     const a = document.createElement("a");
     a.href = href;
     a.target = "_blank";
     a.rel = "noreferrer";
-    a.textContent = value;
+    a.textContent = shown;
     td.append(a);
     return td;
   }
-  td.textContent = value;
-  if (isGap(value)) td.className = "gap";
+  td.textContent = shown;
+  if (shown === "—" || shown.startsWith("— ")) td.className = "gap";
   return td;
 }
 
@@ -921,6 +986,19 @@ function formatBogota(date) {
   }).format(date);
 }
 
+function eventWhen(at) {
+  if (!at) return "";
+  if (/^\d{4}-\d{2}-\d{2}$/.test(at)) {
+    return new Intl.DateTimeFormat("es-CO", {
+      timeZone: "America/Bogota",
+      day: "numeric",
+      month: "short",
+      year: "numeric",
+    }).format(new Date(`${at}T12:00:00-05:00`));
+  }
+  return formatBogota(new Date(at));
+}
+
 function agoLabel(from) {
   if (!from) return "";
   const sec = Math.max(0, Math.round((Date.now() - from.getTime()) / 1000));
@@ -934,6 +1012,8 @@ function kindLabel(kind) {
   if (kind === "credito") return "Crédito";
   if (kind === "especie") return "En especie";
   if (kind === "anuncio") return "Anuncio";
+  if (kind === "testigo") return "Testigo";
+  if (kind === "disputa") return "Disputa";
   return kind || "Registro";
 }
 
@@ -945,11 +1025,17 @@ function renderPulsoEvents(events) {
     const li = document.createElement("li");
     const when = document.createElement("div");
     when.className = "when";
-    when.textContent = event.at ? formatBogota(new Date(event.at)) : "";
+    when.textContent = eventWhen(event.at);
     const body = document.createElement("div");
     body.append(
-      `${kindLabel(event.kind)} · ${event.origin || "Origen no nombrado"} · ${event.amount || "Información no disponible"} · ${event.territory || "Información no disponible"}`,
+      `${kindLabel(event.kind)} · ${event.origin || "Origen no nombrado"} · ${displayValue(event.amount)} · ${displayValue(event.territory)}`,
     );
+    if (event.note) {
+      const note = document.createElement("div");
+      note.className = "pulso-note";
+      note.textContent = event.note;
+      body.append(note);
+    }
     if (event.source?.url) {
       const a = document.createElement("a");
       a.href = event.source.url;
@@ -1030,7 +1116,7 @@ async function verifyAid() {
     ledgerUpdatedLabel = pulso.ledgerUpdated || ledger?.updated || "";
     renderPulsoEvents(events);
     setPulsoStatus(
-      "Verificación cada 60 s. Sin fuente, no entra cifra. Lo anunciado no es lo ejecutado.",
+      "Observatorio de ayuda a Colombia. Verificación cada 60 s. Sin fuente, no entra cifra.",
       true,
     );
     tickClock();
@@ -1053,5 +1139,46 @@ function startPulso() {
   });
 }
 
-startPulso();
-startTour(habitarTour, "habitar");
+if (document.getElementById("flujos-body") || pulsoEl) startPulso();
+if (oval) startTour(habitarTour, "habitar");
+
+const ayudaForm = document.getElementById("form-ayuda");
+if (ayudaForm) {
+  const ayudaOut = document.getElementById("ayuda-out");
+  const ayudaStatus = document.getElementById("ayuda-status");
+  ayudaForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const data = new FormData(ayudaForm);
+    const kind = String(data.get("kind"));
+    const url = String(data.get("url") || "").trim();
+    const needsUrl = kind !== "testigo" && kind !== "disputa";
+    if (needsUrl && !url) {
+      ayudaStatus.textContent =
+        "Sin URL no entra cifra. El testigo puede ir sin URL; el anuncio no.";
+      return;
+    }
+    const day = new Date().toISOString().slice(0, 10);
+    const record = {
+      id: `evt-${day}-${kind}`,
+      at: day,
+      kind,
+      origin: String(data.get("origin") || "").trim(),
+      amount: String(data.get("amount") || "").trim() || "—",
+      territory: String(data.get("territory") || "").trim(),
+      note: String(data.get("note") || "").trim(),
+      source: url
+        ? { name: "Aporte ciudadano", url }
+        : { name: "Testigo de territorio — no certifica desembolso" },
+    };
+    const text = `${JSON.stringify(record, null, 2)}\n`;
+    ayudaOut.hidden = false;
+    ayudaOut.textContent = text;
+    try {
+      await navigator.clipboard.writeText(text);
+      ayudaStatus.textContent =
+        "Registro copiado. Se pega en data/pulso.json. No gira un peso.";
+    } catch {
+      ayudaStatus.textContent = "Copia el registro de abajo.";
+    }
+  });
+}

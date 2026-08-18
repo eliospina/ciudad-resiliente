@@ -4,26 +4,57 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ciudad Resiliente — el óvalo</title>
+    <meta
+      name="description"
+      content="Una esperanza habitable. Código abierto: clona el repositorio y propone una célula. Risaralda, Valle, Chocó."
+    />
+    <meta property="og:title" content="Hacemos la ciudad." />
+    <meta
+      property="og:description"
+      content="Código abierto. Clona el repo. Propón cómo quieres que sea la ciudad."
+    />
+    <meta
+      property="og:image"
+      content="https://ciudad-resiliente.vercel.app/public/cartel-ciudad.png"
+    />
+    <meta property="og:url" content="https://ciudad-resiliente.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://ciudad-resiliente.vercel.app/public/cartel-ciudad.png"
+    />
+    <link rel="canonical" href="https://ciudad-resiliente.vercel.app/" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="hero">
       <img
         src="public/ciudad-ovalo.png"
-        alt="Ciudad ovalada con un núcleo de vida en el centro, células verdes y montañas."
+        alt="Primera célula compacta en ladera: patio al centro, cubiertas ligeras, a pie. No es la ciudad entera."
       />
       <div class="hero-copy">
         <p class="kicker">Risaralda · Valle · Chocó</p>
         <h1>Hacemos la ciudad.</h1>
-        <p class="lead">Óvalo de células. En el centro, un núcleo de vida.</p>
+        <p class="lead">
+          Una esperanza: barrios a pie, con el agua, la luz y la comida cerca,
+          integrados a la montaña.
+        </p>
+        <p class="plain-hero">
+          El sismo nos dejó lejos de los recursos. Este código queda abierto
+          para que, si vuelve la catástrofe, se pueda reaccionar más rápido.
+          Nosotras iniciamos. Ustedes proponen.
+        </p>
+        <a class="enter-city" href="plaza.html">Propón una célula →</a>
+        <a class="enter-city" href="#codigo">Código abierto →</a>
         <ul class="pillars">
-          <li>Sostenibilidad</li>
+          <li>Sostenible</li>
           <li>Energía solar</li>
-          <li>Lo autóctono</li>
-          <li>Territorialidad</li>
-          <li>Identidad cultural</li>
+          <li>De aquí</li>
+          <li>Territorio</li>
+          <li>Cultura</li>
           <li>Educación</li>
-          <li>Agricultura</li>
+          <li>Huerta</li>
         </ul>
       </div>
     </header>
@@ -41,6 +72,9 @@
           </div>
           <h2 id="layer-title">Habitar</h2>
           <p id="layer-lead">Se camina entre árboles. El suelo manda.</p>
+          <p id="layer-plain" class="plain">
+            Cada célula es un barrio que produce lo que consume: agua, luz, comida y escuela, todo a pie.
+          </p>
           <div id="habitar-panel">
             <div class="chips" id="habitar-chips"></div>
           </div>
@@ -57,31 +91,41 @@
             <div class="cards soils" id="soil-cards">
               <article data-soil="risaralda" tabindex="0" role="button">
                 <h3>Risaralda</h3>
-                <p>1200–1800 m. Ladera, sismo, alud.</p>
+                <p>1.200–1.800 m. Ladera, sismo, alud.</p>
               </article>
               <article data-soil="valle" tabindex="0" role="button">
                 <h3>Valle</h3>
-                <p>900–1100 m. Río, calor, crecida.</p>
+                <p>900–1.100 m. Río, calor, crecida.</p>
               </article>
               <article data-soil="choco" tabindex="0" role="button">
                 <h3>Chocó</h3>
-                <p>Cota baja. Selva, lluvia, río-camino.</p>
+                <p>0–100 m. Selva, lluvia, río-camino.</p>
               </article>
             </div>
             <p id="soil-note" class="soil-note">
               Toca un suelo: sitio, agua, luz, huerta.
             </p>
+            <p class="plain">
+              Diez cortes. El kit cambia con el suelo.
+              <a href="paper.html">Abrir el corte.</a>
+            </p>
             <p class="path waste-path" id="waste-path" hidden>
-              Separación en origen → dos metabolismos → compost higiénico →
-              fracción técnica limpia → RCD a agregado → residual publicado
+              Lo que sobra es materia prima: separación en origen →
+              dos flujos (orgánico y técnico) → compost higiénico →
+              pieza técnica limpia → escombro (RCD) a agregado →
+              lo que aún no cierra, publicado.
             </p>
             <p class="chip-label">Valores</p>
+            <p class="chip-hint">Los principios que sostienen cada célula.</p>
             <div class="chips" id="valor-chips"></div>
             <p class="chip-label">Vida en común</p>
+            <p class="chip-hint">Cómo se comparte y se mide la vida del óvalo.</p>
             <div class="chips" id="vida-chips"></div>
             <p class="chip-label">Oficios de la célula</p>
+            <p class="chip-hint">El trabajo que la célula necesita cerca de casa.</p>
             <div class="chips" id="system-chips"></div>
-            <p class="chip-label">Metabolismo</p>
+            <p class="chip-label">Materia prima</p>
+            <p class="chip-hint">Lo que sobra no es basura: vuelve a suelo, a pieza, a agregado.</p>
             <div class="chips" id="waste-chips"></div>
           </div>
           <div class="lesson">
@@ -96,7 +140,7 @@
             <button type="button" id="hacer-btn">Hacer</button>
             <button type="button" id="valores-btn">Valores</button>
             <button type="button" id="vida-btn">Vida en común</button>
-            <button type="button" id="waste-btn">Residuos bajos</button>
+            <button type="button" id="waste-btn">Materia prima</button>
             <span id="tour-step" class="tour-step" hidden></span>
           </div>
         </div>
@@ -134,7 +178,7 @@
               <circle cx="330" cy="190" r="16" />
               <text x="330" y="194">agua</text>
             </g>
-            <g class="cell" data-id="alimento" tabindex="0" role="button" aria-label="Alimentos">
+            <g class="cell" data-id="alimento" tabindex="0" role="button" aria-label="Alimento">
               <circle cx="70" cy="90" r="16" />
               <text x="70" y="94">alimento</text>
             </g>
@@ -158,63 +202,73 @@
         </figure>
       </section>
 
-      <section class="hope">
-        <h2>Caudal</h2>
+      <section class="hope" id="esperanza">
+        <h2>Para qué</h2>
         <p>
-          Primero la célula. Luego la red. Luego el núcleo. Cada peso a la vista,
-          con fuente.
+          Empezar la ciudad. Decir cómo queremos que sea. Integrarnos a la
+          naturaleza, no vencerla.
+        </p>
+        <p class="plain">
+          Si nadie entra, no se pierde. Queda un ejercicio abierto: una semilla
+          para quien la necesite después.
         </p>
       </section>
 
-      <section id="rastreador" class="tracker crystal">
-        <h2>Presupuesto de cristal</h2>
-        <p class="tracker-lede">Cada peso con origen, ruta, territorio y fuente.</p>
-        <ul class="crystal-keys">
-          <li>Lo anunciado no es lo ejecutado.</li>
-          <li>Crédito no es donación.</li>
-          <li>Oferta no es giro.</li>
-          <li>En especie no es caja.</li>
-        </ul>
-        <div class="path">
-          Donante → fondo → primera célula → red → núcleo
-        </div>
-        <p id="pulso" class="pulso" aria-live="polite">
-          <span class="pulso-dot" aria-hidden="true"></span>
-          <span id="pulso-status">El tablero se verifica cada minuto. Sin fuente, no entra cifra.</span>
+      <section id="codigo">
+        <h2>Código abierto</h2>
+        <p>
+          Esto es un repositorio. Se clona, se corrige, se propone. No es una
+          app cerrada.
         </p>
-        <p id="pulso-clock" class="pulso-clock">Aún no se ha leído el caudal.</p>
-        <ol id="pulso-events" class="pulso-events"></ol>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Origen</th>
-                <th>Monto</th>
-                <th>Ruta</th>
-                <th>Territorio</th>
-                <th>Ejecutado</th>
-                <th>Fuente</th>
-              </tr>
-            </thead>
-            <tbody id="flujos-body"></tbody>
-          </table>
-        </div>
-        <p class="disclaimer">
-          Es información, no regulación. No señalamos a nadie; solo informamos.
-          Toda cifra debe ser verificada por el usuario ante su fuente original.
+        <pre class="clone-box" id="clone-box"><code>git clone https://github.com/eliospina/ciudad-resiliente.git
+cd ciudad-resiliente
+python3 -m http.server 4173</code></pre>
+        <p class="plain">
+          <a href="https://github.com/eliospina/ciudad-resiliente">Abrir en GitHub</a>
+          · clonar y abrir un pull request en
+          <a href="plaza.html">la plaza</a>.
+          Licencia MIT.
         </p>
       </section>
 
-      <section>
-        <h2>Invitación</h2>
-        <p>
-          Arquitectas, oficios, universidades, artistas, gobiernos. Código abierto.
-        </p>
+      <section id="invitar">
+        <h2>Participar</h2>
+        <div class="call-split">
+          <article class="call-card">
+            <h3>Arquitectas</h3>
+            <p class="sound">Dibuja el corte. Clona el repo.</p>
+            <p>
+              <a href="https://github.com/eliospina/ciudad-resiliente">GitHub</a>
+              ·
+              <a href="plantar.html">Cómo se planta</a>
+              ·
+              <a href="paper.html">Paper</a>
+            </p>
+          </article>
+          <article class="call-card">
+            <h3>Ciudadanía</h3>
+            <p class="sound">Camina. Propón. Firma.</p>
+            <p>
+              <a href="recorrido.html">Caminar</a>
+              ·
+              <a href="plaza.html">La plaza</a>
+            </p>
+          </article>
+        </div>
       </section>
     </main>
 
     <footer>
-      <p>Ciudad Resiliente · Risaralda · Valle · Chocó · 2026</p>
+      <nav class="doors" aria-label="Dos oficios">
+        <a href="index.html" aria-current="page">La ciudad</a>
+        <a href="plaza.html">Plaza</a>
+        <a href="observatorio.html">Observatorio</a>
+      </nav>
+      <p>
+        Código abierto ·
+        <a href="https://github.com/eliospina/ciudad-resiliente">GitHub</a>
+        · Risaralda · Valle · Chocó · 2026
+      </p>
     </footer>
     <script src="app.js"></script>
   </body>
