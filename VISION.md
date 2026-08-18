@@ -4,7 +4,7 @@ Ciudad ovalada en células. Núcleo de vida: todas las tradiciones. Risaralda, V
 
 Una célula es un barrio que se abastece solo. El óvalo es la ciudad. El núcleo es su plaza.
 
-Tres puertas. La ciudad (arquitectura): el óvalo y el costo de la primera célula. La plaza (ciudadanía): proponer y respaldar células en código. El observatorio (economía): la ayuda a Colombia. No se mezclan las cajas.
+Dos puertas. La ciudad (arquitectura): el óvalo y el costo de la primera célula. La plaza (ciudadanía): proponer y respaldar células en código.
 
 Orden: primera célula → red → núcleo. Se costea la primera que vive, no el masterplan. El crédito de ese orden es la lógica de asentamiento (hábitat que cierra ciclos); no hay patrocinio.
 
@@ -40,8 +40,6 @@ Núcleo: asamblea, chirimía, salsa, currulao, verso. Centro de desarrollo: geme
 
 Metabolismo: lo que sobra es materia prima. Separación en origen; dos flujos (orgánico a suelo, técnico a pieza); escombro (RCD) a agregado; residual publicado.
 
-Economía: oficios de célula; cadena corta de alimentos. Seguridad de forma: caminos vistos, luz, usos mezclados, núcleo vivo. Si la ciudad maneja un peso, cristal: origen, ruta, territorio, fuente. El observatorio lee la ayuda a Colombia y apunta a FTS, Cancillería, SECOP y Cuidar a Colombia. No es la caja de este proyecto. El hueco es el destino municipal.
+Economía: oficios de célula; cadena corta de alimentos. Seguridad de forma: caminos vistos, luz, usos mezclados, núcleo vivo. Si la ciudad maneja un peso, cristal: origen, ruta, territorio, fuente.
 
-Lo anunciado no es lo ejecutado. Crédito no es donación. Oferta no es giro. En especie no es caja. Información, no regulación; quien la lea verifica la fuente.
-
-Código abierto. Nosotras iniciamos; la ciudadanía propone, respalda y construye en código (`plaza.html`). Un respaldo no es un decreto. En las ayudas no se vota la plata: se verifica (`observatorio.html#comunidad`). Se camina la semilla (`recorrido.html`). Se deslotea el plano: corte tipo, no predio (`plantar.html`). El argumento está en el white paper v0.1 (`PAPER.md`); el corte, en v0.2 (`PAPER-v0.2.md`, `paper.html`). Municipio de trabajo: Pereira (hipótesis, `SITIO.md`). El predio es —. El Fondo Milagro no es la caja de este óvalo.
+Código abierto. Nosotras iniciamos; la ciudadanía propone, respalda y construye en código (`plaza.html`). Un respaldo no es un decreto. Se camina la semilla (`recorrido.html`). Se deslotea el plano: corte tipo, no predio (`plantar.html`). El argumento está en el white paper v0.1 (`PAPER.md`); el corte, en v0.2 (`PAPER-v0.2.md`, `paper.html`). Municipio de trabajo: Pereira (hipótesis, `SITIO.md`). El predio es —. El Fondo Milagro no es la caja de este óvalo.

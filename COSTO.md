@@ -52,15 +52,9 @@ En Chocó el monte vuelve solo: se poda y se siembra. No se presupuesta tumbar p
 - Núcleo (plaza, asamblea, gemelo de flujos): después de que las células se sostienen.
 - Un búnker aparte: no se costea un sótano. El refugio es la escuela y la casa de salud diseñadas para aguantar la primera noche.
 - Compra de tierra urbana cara; se planta en frontera agrícola ya existente (UPRA 2023).
-- Las ayudas internacionales del observatorio. Esas no son esta caja.
+- Las ayudas internacionales. Esas no son esta caja.
 
-## Cómo se lee junto al observatorio
-
-El observatorio dice cuánta ayuda **se anunció** a Colombia. Este archivo dice cuánto **podría costar** la primera célula.
-
-No se restan. Crédito no es donación. Oferta no es giro. Lo anunciado no es lo ejecutado. Un anuncio de USD 1.300 millones no financia este óvalo.
-
-Si una donación verificada en caja, en territorio, alcanzara el rango de la primera célula (COP 5.500–8.500 millones), entonces sí habría un puente numérico. Hoy ese puente no está: el destino municipal casi no tiene fuente.
+No se resta un anuncio de ayuda del costo de la primera célula. Crédito no es donación. Oferta no es giro. Lo anunciado no es lo ejecutado. Un anuncio de USD 1.300 millones no financia este óvalo.
 
 ## Cómo implementar
 

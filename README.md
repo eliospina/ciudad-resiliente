@@ -11,13 +11,12 @@ cd ciudad-resiliente
 python3 -m http.server 4173
 ```
 
-Tres puertas. No se mezclan las cajas.
+Dos puertas.
 
 | Link | Oficio |
 | --- | --- |
 | [La ciudad](index.html) | El óvalo y la primera célula |
 | [La plaza](plaza.html) | Proponer y respaldar en código |
-| [Veeduría](veeduria.html) | Seguimiento a la ayuda del sismo, con fuente. Otro oficio. |
 
 Si nadie entra, queda el ejercicio. La semilla está.
 

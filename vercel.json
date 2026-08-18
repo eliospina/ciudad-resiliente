@@ -1,5 +1,21 @@
 {
   "framework": null,
   "outputDirectory": ".",
-  "rewrites": [{ "source": "/veeduria", "destination": "/veeduria.html" }]
+  "redirects": [
+    {
+      "source": "/veeduria",
+      "destination": "https://veeduria-ayuda.vercel.app/",
+      "permanent": true
+    },
+    {
+      "source": "/veeduria.html",
+      "destination": "https://veeduria-ayuda.vercel.app/",
+      "permanent": true
+    },
+    {
+      "source": "/observatorio.html",
+      "destination": "https://veeduria-ayuda.vercel.app/",
+      "permanent": true
+    }
+  ]
 }
