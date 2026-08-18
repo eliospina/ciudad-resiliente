@@ -1067,11 +1067,21 @@ function renderFlowRow(flow, isNew) {
   return tr;
 }
 
+function paintHueco(flows) {
+  const line = document.getElementById("hueco-linea");
+  if (!line || !Array.isArray(flows)) return;
+  const n = flows.length;
+  const noMuni = flows.filter((flow) => !flow.territory || flow.territory.trim() === "—").length;
+  const noExec = flows.filter((flow) => !flow.executed || flow.executed.trim() === "—").length;
+  line.textContent = `De ${n} líneas con fuente, ${noMuni} aún no nombran municipio. ${noExec} no tienen ejecución verificada.`;
+}
+
 async function loadFlows(options = {}) {
   const body = document.getElementById("flujos-body");
   if (!body) return;
   const res = await fetch(`data/flujos.json?t=${Date.now()}`, { cache: "no-store" });
   const data = await res.json();
+  paintHueco(data.flows || []);
   const ids = new Set((data.flows || []).map((flow) => flow.id));
   const stamp = JSON.stringify(data.flows);
   if (!options.force && stamp === lastFlowsStamp && lastFlowIds.size) return data;
@@ -1116,7 +1126,7 @@ async function verifyAid() {
     ledgerUpdatedLabel = pulso.ledgerUpdated || ledger?.updated || "";
     renderPulsoEvents(events);
     setPulsoStatus(
-      "Observatorio de ayuda a Colombia. Verificación cada 60 s. Sin fuente, no entra cifra.",
+      "Ayuda a Colombia. Verificación cada 60 s. Sin fuente, no entra cifra.",
       true,
     );
     tickClock();

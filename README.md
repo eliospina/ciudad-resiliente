@@ -17,7 +17,7 @@ Tres puertas. No se mezclan las cajas.
 | --- | --- |
 | [La ciudad](index.html) | El óvalo y la primera célula |
 | [La plaza](plaza.html) | Proponer y respaldar en código |
-| [Observatorio](observatorio.html) | Ayuda anunciada a Colombia, con fuente |
+| [Veeduría](veeduria.html) | Seguimiento a la ayuda del sismo, con fuente. Otro oficio. |
 
 Si nadie entra, queda el ejercicio. La semilla está.
 
