@@ -4,17 +4,17 @@
   "redirects": [
     {
       "source": "/veeduria",
-      "destination": "https://veeduria-ayuda.vercel.app/",
+      "destination": "https://ojo-al-giro.vercel.app/",
       "permanent": true
     },
     {
       "source": "/veeduria.html",
-      "destination": "https://veeduria-ayuda.vercel.app/",
+      "destination": "https://ojo-al-giro.vercel.app/",
       "permanent": true
     },
     {
       "source": "/observatorio.html",
-      "destination": "https://veeduria-ayuda.vercel.app/",
+      "destination": "https://ojo-al-giro.vercel.app/",
       "permanent": true
     }
   ]
